@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+    x:Class="XamarinForms.E_Navigation.E_TabbedPage.TabbedPages"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:local1="clr-namespace:XamarinForms.G_DataAccess"
+    xmlns:local2="clr-namespace:XamarinForms.E_Navigation.D_MasterDetailPage"
+    xmlns:local3="clr-namespace:XamarinForms.D_Lists"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Tabbed Page"
+    mc:Ignorable="d">
+
+    <!--  Pages can be added as references or inline  -->
+
+    <!--
+        The Xamarin.Forms TabbedPage consists of a list of tabs and a larger detail area,
+        with each tab loading content into the detail area. The following screenshots
+        show a TabbedPage on iOS and Android.
+        
+        https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/navigation/tabbed-page
+    -->
+    <ContentPage
+        Title="My Tab"
+        BackgroundColor="Aqua"
+        IconImageSource="Icon512.png">
+
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Image
+                HeightRequest="100"
+                Source="Icon512.png"
+                WidthRequest="100" />
+            <Label Text="Azman Barraquias" />
+        </StackLayout>
+    </ContentPage>
+
+    <!--
+        External Page
+    -->
+    <local1:H_ConsumingRESTfulServicesPhoto Title="Restful API" Icon="Chathead.png" />
+
+    <local2:FriendMaster Title="MasterDetail" />
+
+    <local3:G_PullToRefresh Title="List" />
+
+    <NavigationPage Title="NavigationPage">
+        <x:Arguments>
+            <ContentPage>
+                <Label FontSize="Large" Text="Hello, World" />
+            </ContentPage>
+        </x:Arguments>
+    </NavigationPage>
+
+</TabbedPage>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.B_Layout._Exercises.StackLayout_1"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="#0078CA"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout Spacing="15" VerticalOptions="Center">
+            <Label
+                FontAttributes="Bold"
+                FontSize="30"
+                HorizontalTextAlignment="Center"
+                Text="Welcome to Xamarin.Forms!"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" />
+            <Label
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+                Text="Cross-platform apps made easy"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" />
+            <Button
+                BackgroundColor="#01A9F2"
+                BorderRadius="10"
+                Text="Login"
+                TextColor="White" />
+            <Button
+                BackgroundColor="#01A9F2"
+                BorderRadius="10"
+                Text="Register"
+                TextColor="White" />
+            <Label
+                Padding="0,0,10,0"
+                HorizontalOptions="End"
+                Text="Xamarin.Forms 2019"
+                TextColor="White" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

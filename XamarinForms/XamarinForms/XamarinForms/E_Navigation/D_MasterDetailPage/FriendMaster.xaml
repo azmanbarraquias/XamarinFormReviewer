@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage
+    x:Class="XamarinForms.E_Navigation.D_MasterDetailPage.FriendMaster"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="ThisMasterDetailPage"
+    IsPresented="True"
+    NavigationPage.HasNavigationBar="False"
+    mc:Ignorable="d">
+
+    <!--
+        The Xamarin.Forms MasterDetailPage is a page that manages two related pages of information
+        – a master page that presents items, and a detail page that presents details about items on the master page.
+        This article explains how to use a MasterDetailPage and navigate between its pages of information.
+        
+        The location of the list of items is identical on each platform, and selecting one of the items will navigate
+        to the corresponding detail page. In addition, the master page also features a navigation bar that contains
+        a button that can be used to navigate to the active detail page:
+        
+        > On iOS, the navigation bar is present at the top of the page and has a button that navigates to the detail page.
+        In addition, the active detail page can be navigated to by swiping the master page to the left.
+        > On Android, the navigation bar is present at the top of the page and displays a title, an icon,
+        and a button that navigates to the detail page. The icon is defined in the [Activity] attribute that
+        decorates the MainActivity class in the Android platform-specific project. In addition, the active detail
+        page can be navigated to by swiping the master page to the left, by tapping the detail page at the far right
+        of the screen, and by tapping the Back button at the bottom of the screen.
+        > On the Universal Windows Platform (UWP), the navigation bar is present at the top of the page and has
+        a button that navigates to the detail page.
+        
+        https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/navigation/master-detail-page
+    -->
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Friend List">
+            <StackLayout>
+                <ListView
+                    x:Name="friendListView"
+                    ItemSelected="CellListView_ItemSelected"
+                    ItemTapped="CellListView_ItemTapped">
+                    <ListView.ItemTemplate>
+                        <!--  ItemTemplate which is template of each item on the list  -->
+                        <DataTemplate>
+                            <TextCell Detail="{Binding Status}" Text="{Binding Name}" />
+
+
+                            <!--  If you want image to your item use ImageCell  -->
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+
+    <MasterDetailPage.Detail>
+        <ContentPage Title="Friend UI">
+            <Label
+                HorizontalOptions="CenterAndExpand"
+                Text="Friend UI"
+                VerticalOptions="CenterAndExpand" />
+        </ContentPage>
+    </MasterDetailPage.Detail>
+
+</MasterDetailPage>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+    x:Class="XamarinForms.E_Navigation._Exercies.MainPageTabbed"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:local1="clr-namespace:XamarinForms.E_Navigation._Exercies"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    NavigationPage.HasBackButton="False"
+    NavigationPage.HasNavigationBar="False"
+    mc:Ignorable="d">
+    <!--  Pages can be added as references or inline  -->
+    <local1:ActivityPage Title="Activity" IconImageSource="heart.png" />
+    <local1:ProfilePage Title="Profile" IconImageSource="user.png" />
+
+</TabbedPage>

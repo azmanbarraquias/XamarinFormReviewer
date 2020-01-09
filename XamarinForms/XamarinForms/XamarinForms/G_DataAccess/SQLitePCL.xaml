@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.G_DataAccess.SQLitePCL"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <!--
+        Xamarin.Forms Local Databases
+        
+        Download Sample Download the sample
+        
+        The SQLite database engine allows Xamarin.Forms applications to load and save data objects in shared code.
+        The sample application uses a SQLite database table to store todo items. This article describes how to use
+        SQLite.Net in shared code to store and retrieve information in a local database.
+        
+        https://docs.microsoft.com/en-us/xamarin/xamarin-forms/data-cloud/data/databases
+    -->
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                HorizontalOptions="CenterAndExpand"
+                Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.B_Layout.A_StackLayout"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Padding="0,20,0,0"
+    BackgroundColor="#851DE9"
+    mc:Ignorable="d">
+    <!--
+        StackLayout
+        - By Default StackLayout fill its parent
+        - By Default Spacing is 6
+        - Orientation default is vertical
+        - Padding is the amount of space between the layout and its children.
+        
+        StackLayout - organizes views in a one-dimensional line ("stack"), either horizontally or
+        vertically. Views in a StackLayout can be sized based on the space in the layout using
+        layout options. Positioning is determined by the order views were added to the layout and
+        the layout options of the views.
+        
+        Purpose:
+        StackLayout is less complex than other views. Simple linear interfaces can be created by just
+        adding views to a StackLayout, and more complex interfaces created by nesting them.
+        
+        Usage & Behavior:
+        Spacing
+        By default, StackLayout will add a 6px margin between views. This can be controlled or
+        set to have no margin by setting the Spacing property on StackLayout.
+        
+        https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/stack-layout
+    -->
+    <StackLayout
+        Padding="20"
+        BackgroundColor="Yellow"
+        HorizontalOptions="CenterAndExpand"
+        Orientation="Horizontal"
+        Spacing="10"
+        VerticalOptions="Center">
+        <StackLayout>
+            <Label
+                HorizontalTextAlignment="Center"
+                Text="Stack Layout XAML"
+                VerticalOptions="Center" />
+            <Button
+                BackgroundColor="White"
+                BorderColor="Black"
+                BorderRadius="20"
+                BorderWidth="4"
+                Clicked="CodeBehindButton"
+                Text="CodeBehind"
+                TextColor="Black" />
+        </StackLayout>
+
+        <StackLayout Padding="5" BackgroundColor="CornflowerBlue">
+            <Image Source="http://placehold.it/100x100" />
+            <Label
+                Padding="5,2,5,2"
+                BackgroundColor="Black"
+                HorizontalTextAlignment="Center"
+                Text="Label 1"
+                TextColor="White" />
+        </StackLayout>
+
+        <StackLayout Padding="5" BackgroundColor="CadetBlue">
+            <Label
+                Padding="5,2,5,2"
+                BackgroundColor="Black"
+                HorizontalTextAlignment="Center"
+                Rotation="180"
+                Text="Label 1"
+                TextColor="White" />
+            <Image Source="http://placehold.it/100x100" />
+        </StackLayout>
+
+        <StackLayout Padding="5" BackgroundColor="DarkBlue">
+            <Image Rotation="45" Source="http://placehold.it/100x100" />
+            <Label
+                Padding="5,2,5,2"
+                BackgroundColor="Black"
+                HorizontalTextAlignment="Center"
+                Rotation="180"
+                Text="Label 1"
+                TextColor="White" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

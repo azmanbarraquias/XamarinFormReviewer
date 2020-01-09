@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.C_Images._Exercises.PhotoGallery"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:local="clr-namespace:XamarinForms.C_Images.MarkupExtensions"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <AbsoluteLayout BackgroundColor="pink">
+        <Image
+            x:Name="MainViewImages"
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            AbsoluteLayout.LayoutFlags="All"
+            Aspect="AspectFit"
+            BackgroundColor="Aqua" />
+        <Button
+            AbsoluteLayout.LayoutBounds="0.15, 0.05, 50, 50"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            BackgroundColor="Transparent"
+            Clicked="PreviousButton"
+            Image="{local:EmbeddedImageInXAML leftArrowIcon.png}" />
+
+
+        <ActivityIndicator
+            AbsoluteLayout.LayoutBounds="0.5, 0.05, 50, 50"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            IsRunning="{Binding Source={x:Reference MainViewImages}, Path=IsLoading}"
+            Color="Black" />
+        <Button
+            AbsoluteLayout.LayoutBounds="0.85, 0.05, 50, 50"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            BackgroundColor="Transparent"
+            Clicked="NextButton"
+            Image="{local:EmbeddedImageInXAML rightArrowIcon.png}" />
+        <Label
+            x:Name="ImageURLTitle"
+            AbsoluteLayout.LayoutBounds="0.5, 0.80"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            FontSize="Medium"
+            Text=""
+            TextColor="MediumVioletRed" />
+
+        <Button
+            AbsoluteLayout.LayoutBounds="0.5, 0.95"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            BackgroundColor="Transparent"
+            BorderColor="Black"
+            BorderRadius="20"
+            BorderWidth="4"
+            Clicked="RandomButton"
+            Text="Random Image" />
+
+    </AbsoluteLayout>
+
+</ContentPage>

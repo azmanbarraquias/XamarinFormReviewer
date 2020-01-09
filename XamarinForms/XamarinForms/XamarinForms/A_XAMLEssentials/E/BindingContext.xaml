@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.A_XAMLEssentials.E.BindingContext"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="BlueViolet"
+    mc:Ignorable="d">
+    <!--
+        'x' is a prefix which is declare on xmlns:x microsoft
+        namespace declaration 'Name' belong to the standard xaml
+    -->
+
+    <!--
+        Data binding
+        - is the technique of linking properties of two objects so that changes
+        in one property are automatically reflected in the other property. Data binding is an
+        integral part of the Model-View-ViewModel (MVVM) application architecture.
+        also uses in WPF, Silverlight, Angular, Knockout;
+        example: label.Text == slider.value
+    -->
+
+    <!--
+        Markup extensions {}
+        - are a XAML technique for obtaining a value that is neither a primitive nor a specific XAML type.
+        For attribute usage, markup extensions use the known character sequence of an opening curly brace { to enter the markup
+        extension scope, and a closing curly brace } to exit
+    -->
+
+    <!--
+        More Manage Using BindingContext
+        You can also put this BindingContext on LayoutParent
+        so the child can use the binding value or it will be inherited to all of its child
+    -->
+
+    <!--
+        Xamarin Forms Binding. Binding, in the most common context,
+        is the process of mapping a property on a Page, to a property in a ViewModel.
+        In Xamarin Forms terms, the Page is a BindableObject and the BindableObject has
+        a BindingContext, which would be the ViewModel.
+    -->
+    <StackLayout
+        BindingContext="{x:Reference slider}"
+        HorizontalOptions="Fill"
+        VerticalOptions="CenterAndExpand">
+
+        <Label
+            HorizontalTextAlignment="Center"
+            Text="Binding Context"
+            TextColor="Black"
+            VerticalOptions="Center" />
+
+        <BoxView Opacity="{Binding Value}" Color="Green" />
+
+        <Label
+            FontAttributes="Bold"
+            FontSize="30"
+            HorizontalTextAlignment="Center"
+            Opacity="{Binding Value}"
+            Text="{Binding Value, StringFormat='Value is {0:F2}'}"
+            TextColor="Black"
+            VerticalOptions="Center" />
+
+        <!--  Default fill and expand base on parent  -->
+        <Slider x:Name="slider" />
+    </StackLayout>
+</ContentPage>

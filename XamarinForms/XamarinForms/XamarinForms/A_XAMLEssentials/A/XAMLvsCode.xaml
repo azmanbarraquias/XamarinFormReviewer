@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.A_XAMLEssentials.A.XAMLvsCode"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ContentPage.Content>
+        <!--
+            Code
+            Content = new Label
+            {
+            FontAttributes = FontAttributes.Bold,
+            FontSize = 30,
+            HorizontalOptions = LayoutOptions.Center,
+            HorizontalTextAlignment = TextAlignment.Center,
+            Text = "Code Behind!",
+            TextColor = Color.FromHex("#000073"),
+            VerticalOptions = LayoutOptions.Center
+            };
+        -->
+
+        <!--  XAML  -->
+        <Label
+            FontAttributes="Bold"
+            FontSize="30"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            Text="XAML"
+            TextColor="#000073"
+            VerticalOptions="Center" />
+
+    </ContentPage.Content>
+
+</ContentPage>

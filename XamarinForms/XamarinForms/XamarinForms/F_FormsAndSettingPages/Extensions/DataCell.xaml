@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ViewCell
+    x:Class="XamarinForms.F_FormsAndSettingPages.Extensions.DataCell"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ViewCell.View>
+        <StackLayout Padding="13,0" Orientation="Horizontal">
+            <!--  13 horizontal,  0 vertical  -->
+            <Label Text="{Binding Label}" VerticalOptions="Center" />
+            <DatePicker Date="March 30, 2017" HorizontalOptions="EndAndExpand" />
+        </StackLayout>
+
+    </ViewCell.View>
+</ViewCell>

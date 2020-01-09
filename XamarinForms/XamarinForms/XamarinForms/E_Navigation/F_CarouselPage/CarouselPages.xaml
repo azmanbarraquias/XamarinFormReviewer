@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage
+    x:Class="XamarinForms.E_Navigation.F_CarouselPage.CarouselPages"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:local1="clr-namespace:XamarinForms.G_DataAccess"
+    xmlns:local2="clr-namespace:XamarinForms.E_Navigation.A_HierarchicalNavigation"
+    xmlns:local3="clr-namespace:XamarinForms.D_Lists"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Carousel Page"
+    mc:Ignorable="d">
+    <!--  Pages can be added as references or inline  -->
+
+    <!--
+        The Xamarin.Forms CarouselPage is a page that users can swipe from side to side to navigate through pages
+        of content, like a gallery. This article demonstrates how to use a CarouselPage to navigate through
+        a collection of pages.
+        
+        Important
+        The CarouselPage has been superseded by the CarouselView, which provides a scrollable layout where
+        users can swipe to move through a collection of items. For more information about the CarouselView,
+        see Xamarin.Forms CarouselView.
+        
+        https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/navigation/carousel-page
+    -->
+    <ContentPage
+        Title="My Tab"
+        BackgroundColor="Aqua"
+        IconImageSource="Icon512.png">
+
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Image
+                HeightRequest="100"
+                Source="Icon512.png"
+                WidthRequest="100" />
+            <Label Text="Azman Barraquias" />
+        </StackLayout>
+
+    </ContentPage>
+
+    <!--
+        External Page
+    -->
+    <local1:H_ConsumingRESTfulServicesPhoto Title="Restful API" Icon="Chathead.png" />
+
+    <!--<local2:FriendMaster Title="MasterDetail" /> Error-->
+
+    <local3:G_PullToRefresh Title="List" />
+
+    <local2:WelcomePage />
+
+</CarouselPage>

@@ -1,0 +1,23 @@
+public class App : Application
+{
+	App()
+	{
+		//Dictornary
+		Priperties["Username"] = "Jazz";
+	}
+}
+
+
+#Data Access
+
+> Application Property 
+- Developers can use this property to store persistent application state across all application code. 
+  This values in the dictionary are preserved on the device when the application is paused or shut down.
+ - Application Setting
+ - Transient data
+
+> File System, Save txt or image localy
+
+> SQLite - local database
+
+> Cloud - http cloud database

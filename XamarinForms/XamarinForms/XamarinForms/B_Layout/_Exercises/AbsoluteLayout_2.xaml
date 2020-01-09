@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.B_Layout._Exercises.AbsoluteLayout_2"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="red"
+    mc:Ignorable="d">
+    <AbsoluteLayout>
+        <Image
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            AbsoluteLayout.LayoutFlags="All"
+            Aspect="AspectFill"
+            Source="http://lorempixel.com/1920/1080/nature/7/" />
+        <Label
+            AbsoluteLayout.LayoutBounds="0.5, 20"
+            AbsoluteLayout.LayoutFlags="XProportional"
+            FontAttributes="Bold"
+            FontSize="30"
+            Text="Relax"
+            TextColor="White" />
+        <StackLayout
+            AbsoluteLayout.LayoutBounds="0, 1, 1, 100"
+            AbsoluteLayout.LayoutFlags="WidthProportional, PositionProportional"
+            BackgroundColor="#7F000000"
+            Orientation="Horizontal">
+            <Button
+                BackgroundColor="Transparent"
+                FontSize="15"
+                HorizontalOptions="CenterAndExpand"
+                Text="Profile"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" />
+            <Button
+                BackgroundColor="Transparent"
+                FontSize="15"
+                HorizontalOptions="CenterAndExpand"
+                Text="Meditate"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" />
+            <Button
+                BackgroundColor="Transparent"
+                FontSize="15"
+                HorizontalOptions="CenterAndExpand"
+                Text="Themes"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>

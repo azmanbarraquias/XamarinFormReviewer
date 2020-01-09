@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.F_FormsAndSettingPages.I_CustomCells"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <!--
+        Creating a Custom cell in table view is same as creating a custom cell in list view.
+        
+        A Xamarin.Forms ViewCell is a cell that can be added to a ListView or TableView, which contains a developer-defined
+        view. This article demonstrates how to create a custom renderer for a ViewCell that's hosted inside a Xamarin.Forms
+        ListView control. This stops the Xamarin.Forms layout calculations from being repeatedly called during ListView scrolling.
+        
+        Every Xamarin.Forms cell has an accompanying renderer for each platform that creates an instance of a native control.
+        When a ViewCell is rendered by a Xamarin.Forms application, in iOS the ViewCellRenderer class is instantiated,
+        which in turn instantiates a native UITableViewCell control. On the Android platform, the ViewCellRenderer
+        class instantiates a native View control. On the Universal Windows Platform (UWP), the ViewCellRenderer class
+        instantiates a native DataTemplate. For more information about the renderer and native control classes that
+        Xamarin.Forms controls map to, see Renderer Base Classes and Native Controls.
+        
+        https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/custom-renderer/viewcell
+    -->
+    <TableView Intent="Form">
+        <TableRoot>
+            <TableSection Title="Forms">
+                <ViewCell>
+                    <StackLayout Padding="13,0" Orientation="Horizontal">
+                        <!--  13 horizontal,  0 vertical  -->
+                        <Label Text="Start" VerticalTextAlignment="Center" />
+                        <DatePicker Date="March 30, 2017" HorizontalOptions="EndAndExpand" />
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Padding="13,0" Orientation="Horizontal">
+                        <Label Text="Volume" VerticalTextAlignment="Center" />
+                        <Slider
+                            HorizontalOptions="FillAndExpand"
+                            MaximumTrackColor="Red"
+                            MinimumTrackColor="Blue" />
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

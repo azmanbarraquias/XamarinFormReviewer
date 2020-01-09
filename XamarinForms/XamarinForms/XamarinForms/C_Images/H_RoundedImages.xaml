@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.C_Images.H_RoundedImages"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:local="clr-namespace:XamarinForms.C_Images.MarkupExtensions"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="Aqua"
+    mc:Ignorable="d">
+
+    <!--
+        https://github.com/jamesmontemagno/ImageCirclePlugin
+    -->
+
+    <AbsoluteLayout>
+
+        <controls:CircleImage
+            AbsoluteLayout.LayoutBounds="0.5, 0.05"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Aspect="AspectFill"
+            BorderColor="#FF1414"
+            BorderThickness="1"
+            FillColor="#FABA00"
+            Source="{local:EmbeddedImageInXAML Azman.jpg}">
+
+            <controls:CircleImage.WidthRequest>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="Android, iOS">100</On>
+                    <On Platform="WinPhone">75</On>
+                </OnPlatform>
+            </controls:CircleImage.WidthRequest>
+
+            <controls:CircleImage.HeightRequest>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="Android, iOS">100</On>
+                    <On Platform="WinPhone">75</On>
+                </OnPlatform>
+            </controls:CircleImage.HeightRequest>
+
+        </controls:CircleImage>
+
+        <Image
+            AbsoluteLayout.LayoutBounds="0.5, 0.5"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            BackgroundColor="Pink"
+            Source="{local:EmbeddedImageInXAML Azman.jpg}" />
+
+        <controls:CircleImage
+            AbsoluteLayout.LayoutBounds="0.5, 1, 0.5, 0.25"
+            AbsoluteLayout.LayoutFlags="All"
+            Aspect="AspectFit"
+            Source="{local:EmbeddedImageInXAML Azman.jpg}" />
+
+
+
+
+    </AbsoluteLayout>
+
+</ContentPage>

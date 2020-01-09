@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.C_Images.E_EmbeddedImagesXAML"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:local="clr-namespace:XamarinForms.C_Images.MarkupExtensions"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <!--
+        By default we cannot set resource in XAML, only in codebehind,
+        so to do that we create a class program
+        https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/images?tabs=windows
+    -->
+    <AbsoluteLayout>
+        <!--  xmlns:local="clr-namespace:XamarinForms.C_Images.MarkupExtensions"  -->
+        <Image
+            x:Name="Image1"
+            AbsoluteLayout.LayoutBounds="0.5, 0,  1, 0.35"
+            AbsoluteLayout.LayoutFlags="All"
+            Aspect="AspectFit"
+            BackgroundColor="BlueViolet"
+            Source="{local:EmbeddedImageInXAML Azman.jpg}" />
+    </AbsoluteLayout>
+</ContentPage>

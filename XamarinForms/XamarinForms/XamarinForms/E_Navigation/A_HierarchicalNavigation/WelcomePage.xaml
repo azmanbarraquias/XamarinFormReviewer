@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.E_Navigation.A_HierarchicalNavigation.WelcomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Welcome"
+    BackgroundColor="LightPink"
+    mc:Ignorable="d">
+
+    <!--
+        Hierarchical Navigation
+        
+        The NavigationPage class provides a hierarchical navigation experience where the user is
+        able to navigate through pages, forwards and backwards, as desired. T
+        he class implements navigation as a last-in, first-out (LIFO) stack of Page objects.
+        This article demonstrates how to use the NavigationPage class to perform navigation in a stack of pages.
+        
+        https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/navigation/hierarchical
+    -->
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Label
+                FontAttributes="Bold"
+                FontSize="Large"
+                Text="Welcome to Xamarin.Forms! 1st Page"
+                TextColor="Black" />
+            <Button
+                BackgroundColor="Transparent"
+                Clicked="NextButton"
+                FontSize="Medium"
+                Text="Next"
+                TextColor="Blue" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

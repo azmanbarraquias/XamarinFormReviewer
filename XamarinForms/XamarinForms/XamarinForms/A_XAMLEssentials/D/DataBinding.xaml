@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.A_XAMLEssentials.D.DataBinding"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="BlueViolet"
+    mc:Ignorable="d">
+    <!--
+        'x' is a prefix which is declare on xmlns:x microsoft
+        namespace declaration 'Name' belong to the standard xaml
+    -->
+
+    <!--
+        Data binding
+        - is the technique of linking properties of two objects so that changes
+        in one property are automatically reflected in the other property. Data binding is an
+        integral part of the Model-View-ViewModel (MVVM) application architecture.
+        also uses in WPF, Silverlight, Angular, Knockout;
+        example: label.Text == slider.value
+    -->
+
+    <!--
+        Markup extensions {}
+        - are a XAML technique for obtaining a value that is neither a primitive nor a specific XAML type.
+        For attribute usage, markup extensions use the known character sequence of an opening curly brace { to enter the markup
+        extension scope, and a closing curly brace } to exit
+    -->
+    <StackLayout HorizontalOptions="Fill" VerticalOptions="CenterAndExpand">
+        <Label
+            HorizontalTextAlignment="Center"
+            Text="Data Binding"
+            TextColor="Black"
+            VerticalOptions="Center" />
+        <Label
+            x:Name="SliderHeaderText"
+            FontAttributes="Bold"
+            FontSize="30"
+            HorizontalTextAlignment="Center"
+            Text="{Binding Source={x:Reference slider}, StringFormat='Value is {0:F2}', Path=Value}"
+            TextColor="Black"
+            VerticalOptions="Center" />
+
+        <!--  Default fill and expand base on parent  -->
+        <Slider x:Name="slider" />
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.F_FormsAndSettingPages.H_TableView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="TableView"
+    mc:Ignorable="d">
+
+    <!--
+        Xamarin.Forms TableView
+        
+        TableView is a view for displaying scrollable lists of data or choices where there are rows
+        that don't share the same template. Unlike ListView, TableView does not have the concept of an
+        ItemsSource, so items must be manually added as children.
+        
+        
+        Use cases
+        TableView is useful when:
+        
+        > presenting a list of settings,
+        > collecting data in a form, or
+        > showing data that is presented differently from row to row (e.g. numbers, percentages and images).
+        
+        TableView handles scrolling and laying out rows in attractive sections, a common need for the above scenarios.
+        The TableView control uses each platform's underlying equivalent view when available,
+        creating a native look for each platform.
+        
+        Appearance
+        TableView exposes the Intent property, which can be set to any of the TableIntent enumeration members:
+        
+        > Data – for use when displaying data entries. Note that ListView may be a better option for scrolling lists of data.
+        > Form – for use when the TableView is acting as a Form.
+        > Menu – for use when presenting a menu of selections.
+        > Settings – for use when displaying a list of configuration settings.
+        
+        The TableIntent value you choose may impact how the TableView appears on each platform.
+        Even if there are not clear differences, it is a best practice to select the TableIntent that most closely
+        matches how you intend to use the table.
+        
+        In addition, the color of the text displayed for each TableSection can be changed by setting the
+        TextColor property to a Color.
+    -->
+    <TableView Intent="Form">
+        <!--  Intent dont change the UI, only for best Practice  -->
+        <TableRoot>
+            <!--
+                Property Element Syntax
+            -->
+            <TableSection Title="Basic Forms" TextColor="Red">
+                <TextCell
+                    Detail="eg. Azmam Barraquias"
+                    DetailColor="Blue"
+                    Text="Name" />
+                <EntryCell Label="Title:" Placeholder="Enter name here" />
+                <ImageCell ImageSource="Chathead.png" Text="Image" />
+                <SwitchCell
+                    On="True"
+                    OnColor="Blue"
+                    Text="Notifications" />
+
+            </TableSection>
+            <TableSection Title="Date/Time" TextColor="Red">
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal">
+                        <Label
+                            Padding="10"
+                            BackgroundColor="Red"
+                            HorizontalOptions="StartAndExpand"
+                            Text="Set Date"
+                            VerticalTextAlignment="Center" />
+                        <DatePicker BackgroundColor="Aqua" />
+                    </StackLayout>
+                </ViewCell>
+
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

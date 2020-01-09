@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.B_Layout.C_AbsoluteLayout"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Padding="10"
+    BackgroundColor="#AB45F2"
+    mc:Ignorable="d">
+
+    <!--
+        Xamarin.Forms AbsoluteLayout
+        
+        > Anchor elements to edges of the screen
+        > Overlay Elements
+        > More Powerfull than Relative Layout
+        
+        AbsoluteLayout positions and sizes child elements proportional to its own size and position
+        or by absolute values. Child views may be positioned and sized using proportional values or
+        static values, and proportional and static values can be mixed.
+        
+        Purpose – common uses for AbsoluteLayout.
+        Usage – how to use AbsoluteLayout to achieve your desired design.
+        Proportional Layouts – understand how proportional values work in an AbsoluteLayout.
+        Specifying Values – understand how proportional and absolute values are specified.
+        Proportional Values – understand how proportional values work.
+        Absolute Values – understand how absolute values work.
+        
+        Purpose:
+        Because of the positioning model of AbsoluteLayout, the layout makes it relatively straightforward
+        to position elements so that they are flush with any side of the layout, or centered. With proportional
+        sizes and positions, elements in an AbsoluteLayout can scale automatically to any view size. For items
+        where only the position but not the size should scale, absolute and proportional values can be mixed.
+        
+        AbsoluteLayout could be used anywhere elements need to be positioned within a view and is
+        especially useful when aligning elements to edges.
+        
+        Usage:
+        Proportional Layouts,
+        AbsoluteLayout has a unique anchor model whereby the anchor of the element is positioned relative
+        to its element as the element is positioned relative to the layout when proportional positioning is used.
+        When absolute positioning is used, the anchor is at (0,0) within the view. This has two important consequences:
+        
+        > Elements cannot be positioned off screen using proportional values.
+        > Elements can be reliably positioned along any side of the layout or in the center, regardless of the size
+        of the layout or device.
+        AbsoluteLayout, like RelativeLayout, is able to position elements so that they overlap.
+    -->
+
+    <!--
+        AbsoluteLayout.LayoutBounds=(x, y, width, height) default
+        they are absolute (0, 0, default, default) else proposional ( 0-1 ,  0-1,  0-1,  0-1)
+        
+        Flags:
+        None – interprets all values as absolute. This is the default value if no layout flags are specified.
+        All – interprets all values as proportional.
+        WidthProportional – interprets the Width value as proportional and all other values as absolute.
+        HeightProportional – interprets only the height value as proportional with all other values absolute.
+        XProportional – interprets the X value as proportional, while treating all other values as absolute.
+        YProportional – interprets the Y value as proportional, while treating all other values as absolute.
+        PositionProportional – interprets the X and Y values as proportional, while the size values are interpreted as absolute.
+        SizeProportional – interprets the Width and Height values as proportional while the position values are absolute.
+    -->
+    <AbsoluteLayout Padding="5" BackgroundColor="#35ED25">
+        <BoxView
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+            AbsoluteLayout.LayoutFlags="SizeProportional"
+            BackgroundColor="#FF4369E8" />
+        <Image
+            AbsoluteLayout.LayoutBounds="0.5, 0.1, 0.56, 0.2633"
+            AbsoluteLayout.LayoutFlags="All"
+            BackgroundColor="PowderBlue"
+            Source="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/graphics/skiasharp/effects/blend-modes/porter-duff-images/seatedmonkey.jpg" />
+
+        <!--  Note when use AbsoluteLayout.LayoutFlags= this Propotional will become 0 to 1 value float  -->
+        <Button
+            AbsoluteLayout.LayoutBounds="0.5, 0.97, 0.9, 100"
+            AbsoluteLayout.LayoutFlags="WidthProportional, PositionProportional"
+            BorderColor="Black"
+            BorderRadius="20"
+            BorderWidth="5"
+            Text="Do nothing button" />
+
+    </AbsoluteLayout>
+
+</ContentPage>

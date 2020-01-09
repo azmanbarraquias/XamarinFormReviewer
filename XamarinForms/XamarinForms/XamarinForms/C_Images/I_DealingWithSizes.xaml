@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.C_Images.I_DealingWithSizes"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:local="clr-namespace:XamarinForms.C_Images.MarkupExtensions"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Padding="10"
+    mc:Ignorable="d">
+    <!--
+        160 unit/pixel == 1 Inch
+        
+        Vivo Y91i smartphone was launched in March 2019.
+        The phone comes with a 6.22-inch touchscreen display with a resolution of 720x1520
+        pixels and an aspect ratio of 19:9.
+        
+        4.5x9.5
+    -->
+    <AbsoluteLayout>
+        <Image
+            AbsoluteLayout.LayoutBounds="0.5, 0.5, 900, 500"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Aspect="AspectFit"
+            BackgroundColor="Red"
+            Source="{local:EmbeddedImageInXAML Azman.jpg}" />
+    </AbsoluteLayout>
+
+
+</ContentPage>

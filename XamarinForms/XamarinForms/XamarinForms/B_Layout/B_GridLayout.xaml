@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.B_Layout.B_GridLayout"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="#851DE9"
+    mc:Ignorable="d">
+    <!--
+        Uses Cases:
+        > Keypads
+        > Calculators
+        > Calendars
+        > Metro-style Designs (Win8)
+        > Photo albums
+        
+        Grid supports arranging views into rows and columns.
+        Rows and columns can be set to have proportional sizes or absolute sizes.
+        The Grid layout should not be confused with traditional tables and is not intended
+        to present tabular data. Grid does not have the concept of row, column or cell
+        formatting. Unlike HTML tables, Grid is purely intended for laying out content.
+        
+        Purpose – common uses for Grid:
+        Usage – how to use Grid to achieve your desired design.
+        Rows and Columns – specify rows and columns for the Grid.
+        Placing Views – add views to the grid at specific rows and columns.
+        Spacing – configure the spaces between rows and columns.
+        Spans – configure elements to span across multiple rows or columns.
+        
+        Purpose:
+        Grid can be used to arrange views into a grid. This is useful in a number of cases:
+        
+        Arranging buttons in a calculator app
+        Arranging buttons/choices in a grid, like the iOS or Android home screens
+        Arranging views so that they are of equal size in one dimension ( like in some toolbars)
+        
+        Usage:
+        Unlike traditional tables, Grid does not infer the number and sizes of rows and columns from
+        the content. Instead, Grid has RowDefinitions and ColumnDefinitions collections. These hold
+        definitions of how many rows and columns will be laid out. Views are added to Grid with specified
+        row and column indices, which identify which row and column a view should be placed in.
+        
+        https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/grid#usage
+    -->
+
+    <Grid
+        Padding="10"
+        BackgroundColor="#434141"
+        ColumnSpacing="10"
+        RowSpacing="10">
+
+        <Grid.RowDefinitions>
+            <!--  This is Property Element Syntax  (Mesurement: Unit)  -->
+            <RowDefinition Height="100" />
+            <!--  first row,by default equal(*) height proporsional value  -->
+            <RowDefinition Height="2*" />
+            <!--  2x taller than 1st row  -->
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <!--  This Adjust the size to the content  -->
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <!--  This is Property Element Syntax  -->
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Grid.Row="0"
+            Grid.Column="0"
+            BackgroundColor="#F25A5A"
+            HorizontalTextAlignment="Center"
+            Text="Label 1"
+            VerticalTextAlignment="Center" />
+        <Label
+            Grid.Row="0"
+            Grid.Column="1"
+            BackgroundColor="#72F560"
+            HorizontalTextAlignment="Center"
+            Text="Label 2"
+            VerticalTextAlignment="Center" />
+        <Label
+            Grid.Row="1"
+            Grid.Column="0"
+            BackgroundColor="#6060F0"
+            HorizontalTextAlignment="Center"
+            Text="Label 3"
+            VerticalTextAlignment="Center" />
+        <Label
+            Grid.Row="1"
+            Grid.Column="1"
+            BackgroundColor="#F0F061"
+            HorizontalTextAlignment="Center"
+            Text="Label 4"
+            VerticalTextAlignment="Center" />
+
+        <Label
+            Grid.Row="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            BackgroundColor="#F061E8"
+            HorizontalTextAlignment="Center"
+            Text="ColumnSpan"
+            VerticalTextAlignment="Center" />
+
+        <Label
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            Grid.Column="2"
+            Padding="5"
+            BackgroundColor="#54EEDF"
+            HorizontalTextAlignment="Center"
+            Text="RowSpan"
+            VerticalTextAlignment="Center" />
+
+        <Button
+            Grid.Row="3"
+            Grid.Column="0"
+            Grid.ColumnSpan="1"
+            BackgroundColor="#F0AA61"
+            BorderRadius="20"
+            BorderWidth="4"
+            Text="Demo 1" />
+
+        <Button
+            Grid.Row="3"
+            Grid.Column="1"
+            Grid.ColumnSpan="1"
+            BackgroundColor="#B32EEB"
+            BorderRadius="20"
+            BorderWidth="4"
+            Text="Demo 2" />
+
+        <Button
+            Grid.Row="3"
+            Grid.Column="2"
+            Grid.ColumnSpan="1"
+            BackgroundColor="#6EEB0F"
+            BorderRadius="20"
+            BorderWidth="4"
+            Text="Demo 3" />
+    </Grid>
+</ContentPage>

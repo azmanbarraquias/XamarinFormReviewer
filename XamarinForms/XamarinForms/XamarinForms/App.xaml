@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="XamarinForms.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <!--
+        xmlns - Xaml namespace declaration.
+        This line own by Xamarin, this namespace is the elemenent
+        that has no prefix.
+        
+        xmls:x - :x this identify a prefix. this namespace own by
+        microsoft which presend standard xaml yr. 2009
+        
+        The d: - XAML namespace is intended for designer support,
+        specifically designer support in the XAML design surfaces of
+        Microsoft Visual Studio and Microsoft Expression Blend.
+        The d: XAML namespace enables designer attributes on XAML elements.
+        These designer attributes only affect the design aspects of how XAML behaves.
+        The designer attributes are ignored when the same XAML is loaded by the XAML
+        parser in the Silverlight run-time, and the application runs. Generally,
+        the designer attributes are valid on any XAML element,
+        but in practice there are only certain scenarios
+        where applying a designer attribute yourself is appropriate.
+        
+        mc - Specifies which XML namespace prefixes encountered in a markup file
+        may be ignored by a XAML processor. The mc:Ignorable attribute supports
+        markup compatibility both for custom namespace mapping and for XAML versioning.
+        
+        x:Class
+        - This attribute belong to the microsoft namespace.
+        look at the value assign thisCodeName.projectName - name of
+        code behind
+        - Configures XAML markup compilation to join partial classes between markup
+        and code-behind. The code partial class is defined in a separate code file in a Common Language
+        Specification (CLS) language, whereas the markup partial class
+        is typically created by code generation during XAML compilation.
+    -->
+
+    <Application.Resources />
+</Application>

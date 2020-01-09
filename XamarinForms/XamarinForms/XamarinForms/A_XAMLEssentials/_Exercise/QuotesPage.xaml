@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.A_XAMLEssentials._Exercise.QuotesPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ContentPage.Padding>
+        <OnPlatform
+            x:TypeArguments="Thickness"
+            Android="20, 30, 20, 20"
+            WinPhone="20, 40, 20, 20"
+            iOS="20, 10, 20, 0" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout BindingContext="{x:Reference FontSizeSlider}">
+            <Button
+                BackgroundColor="Transparent"
+                Clicked="NextQuotesButton"
+                FontSize="Large"
+                Text="Next"
+                TextColor="#009CF8" />
+            <Label
+                Padding="12,0,0,0"
+                FontSize="Medium"
+                Text="{Binding Value, StringFormat='Font Size: {0:F0}'}"
+                TextColor="Black" />
+            <Slider
+                x:Name="FontSizeSlider"
+                Maximum="50"
+                Minimum="16" />
+            <Label
+                x:Name="QuotesText"
+                Padding="12,20,0,0"
+                FontSize="{Binding Value}"
+                Text="Quotes.................."
+                TextColor="Black" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

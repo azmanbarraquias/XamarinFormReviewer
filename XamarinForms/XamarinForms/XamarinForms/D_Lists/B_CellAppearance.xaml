@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.D_Lists.B_CellAppearance"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Padding="10"
+    mc:Ignorable="d">
+
+    <!--
+        Customizing ListView Cell Appearance
+        
+        The Xamarin.Forms ListView class is used to present scrollable lists,
+        which can be customized through the use of ViewCell elements.
+        A ViewCell element can display text and images, indicate a true/false state, and receive user input.
+        
+        Built in Cells
+        Xamarin.Forms comes with built-in cells that work for many applications:
+        
+        TextCell controls are used for displaying text with an optional second line for detail text.
+        ImageCell controls are similar to TextCells but include an image to the left of the text.
+        SwitchCell controls are used to present and capture on/off or true/false states.
+        EntryCell controls are used to present text data that the user can edit.
+        The SwitchCell and EntryCell controls are more commonly used in the context of a TableView.
+        
+        https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/customizing-cell-appearance
+    -->
+    <StackLayout>
+        <ListView x:Name="contactListView">
+            <ListView.ItemTemplate>
+                <!--  ItemTemplate which is template of each item on the list  -->
+                <DataTemplate>
+
+                    <!--<TextCell Detail="{Binding Status}" Text="{Binding Name}" />-->
+                    <!--  If you want image to your item use ImageCell  -->
+
+                    <ImageCell
+                        Detail="{Binding Status}"
+                        ImageSource="{Binding ImageURL}"
+                        Text="{Binding Name}" />
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="XamarinForms.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="BlueViolet"
+    mc:Ignorable="d">
+    <!--
+        In our ContentPage we have some xmls namespace declaration
+        xmls: first one is own by xamarin, and this namespace is for element thats have no prefix
+        xmls:x= we have xmls declaration which identify a prefix of colon 'x' syntax
+        which present standard xaml that microsoft introduce in year 2009.
+        x:Class = class attribute which is prefix with an x, we called is x:Class which belong to microsoft namespace,
+        this attribute connect this xaml file to the codebehind that is XamarinForms.MainPage.cs
+    -->
+
+    <StackLayout Padding="20">
+        <Label
+            FontAttributes="Bold"
+            FontSize="Large"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            Text="Welcome to Xamarin.Form Azman Barraquias"
+            TextColor="LightBlue"
+            VerticalOptions="CenterAndExpand" />
+        <Button
+            BackgroundColor="Black"
+            BorderColor="Green"
+            BorderRadius="20"
+            BorderWidth="2"
+            Clicked="ClickMeButton"
+            FontAttributes="Bold"
+            FontSize="Large"
+            Text="Click Me"
+            TextColor="White" />
+    </StackLayout>
+
+</ContentPage>

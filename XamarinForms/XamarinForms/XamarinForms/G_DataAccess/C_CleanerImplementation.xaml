@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.G_DataAccess.C_CleanerImplementation"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Cleaner Implementation"
+    mc:Ignorable="d">
+    <!--
+        Application.Properties Property
+        Developers can use this property to store persistent application state across all application code.
+        This values in the dictionary are preserved on the device when the application is paused or shut down.
+        The is called transient data.
+    -->
+    <TableView Intent="Form">
+        <TableRoot>
+            <TableSection Title="Setting">
+                <EntryCell
+                    Label="Title"
+                    Placeholder="(eg Shopping)"
+                    Text="{Binding Title}" />
+                <!--  Completed="OnChange"  -->
+
+                <SwitchCell On="{Binding NotificationsEnabled}" Text="Notifications" />
+                <!--  OnChanged="OnChange"  -->
+
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

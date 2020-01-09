@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.B_Layout._Exercises.StackLayout_2"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="WhiteSmoke"
+    mc:Ignorable="d">
+
+    <ContentPage.Padding>
+        <OnPlatform
+            x:TypeArguments="Thickness"
+            Android="1"
+            iOS="0, 20, 0 ,0" />
+    </ContentPage.Padding>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                Padding="20"
+                FontSize="Medium"
+                Text="nyc_photographer"
+                TextColor="Black" />
+
+            <Image Source="http://lorempixel.com/1920/1080/nature/3/" />
+            <StackLayout Orientation="Horizontal" Spacing="0">
+                <Button
+                    BackgroundColor="Transparent"
+                    Clicked="LikeButton"
+                    HorizontalOptions="Center"
+                    Text="Like"
+                    TextColor="#4EA1FE" />
+                <Button
+                    BackgroundColor="Transparent"
+                    Text="Comment"
+                    TextColor="#4EA1FE" />
+                <Button
+                    BackgroundColor="Transparent"
+                    Text="Share"
+                    TextColor="#4EA1FE" />
+            </StackLayout>
+            <StackLayout Padding="10,0,10,0">
+                <BoxView HeightRequest="2" Color="LightGray" />
+                <Label
+                    x:Name="LikeLabel"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    Text="700 likes"
+                    TextColor="Black" />
+                <Label FontSize="Medium" Text="This is a shot yesterday in Skanor, Sweden, when driving home from, a couple of days of work in Denmark." />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

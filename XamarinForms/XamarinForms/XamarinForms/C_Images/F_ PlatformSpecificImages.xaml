@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.C_Images.F__PlatformSpecificImages"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <!--
+            Free icon > icons8.com
+
+
+            Android
+
+            Android Naming Restrictions
+            > lowercase letter
+            > numbers
+            > underscore
+            > period
+
+            Image are located in
+            XamarinForms.Android/Resources/drawable (Old)
+            or
+            XamarinForms.Android/Resources/mipmap-..hdpi (New) - SameName format
+
+            > mipmap-mdpi 48x48 x1
+            > mipmap-hdpi 72x72 x1.5
+            > mipmap-xhdpi 96x96 x2
+            > mipmap-xxhdpi 144x144 x3
+            > mipmap-xxxhdpi 192x192 x4
+
+            72x72 - drawable
+            72x72 - drawable-hdpi
+            96x96 - drawable-xhdpi
+            144x144 - drawable-xxhdpi
+            The mipmap folders are for placing your app/launcher icons (which are shown on the homescreen) in only.
+            Any other drawable assets you use should be placed in the relevant drawable folders as before.
+
+            According to this Google blogpost:
+            It’s best practice to place your app icons in mipmap- folders (not the drawable- folders) because they are used
+            at resolutions different from the device’s current density.
+
+            When referencing the mipmap- folders ensure you are using the following reference:
+            android:icon="@mipmap/ic_launcher"
+
+
+            iOS
+            Image are located inXamarinForms.iOS/Resources
+
+            >clock.png         (32x32)
+            >                  (48x48)
+            >clock@2X.png      (64x64)
+            >clock@3X.png      (96x69)
+            >clock@4X.png      (96x69)
+
+            Note that there a naming convension in iOS name@x123.png
+
+            https://material.io/design/iconography/#grid-keyline-shapes
+
+            if <Image Source="http:// />
+            UriImageSource
+            Else
+            <Image Source="clock.png" />
+            FileImageSource
+
+
+            Windows
+            https://docs.microsoft.com/en-us/previous-versions/windows/apps/jj662924(v=vs.105)?redirectedfrom=MSDN
+            https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/images?tabs=windows
+        -->
+        <StackLayout HorizontalOptions="CenterAndExpand">
+
+            <Label Text="PlatformSpeciicImages" />
+            <!--
+                you can use image from mipmap-...
+            -->
+            <Image BackgroundColor="Pink" Source="Chathead.png" />
+
+            <ImageButton BackgroundColor="Gray" Source="icon512.png" />
+
+            <Image BackgroundColor="Pink" Source="launcher_foreground.png" />
+
+            <ImageButton BackgroundColor="Gray" Source="launcher_foreground.png" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

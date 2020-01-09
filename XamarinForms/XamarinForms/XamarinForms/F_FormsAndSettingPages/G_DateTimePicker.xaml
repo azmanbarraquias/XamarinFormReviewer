@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.F_FormsAndSettingPages.G_DateTimePicker"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sys="clr-namespace:System;assembly=netstandard"
+    Padding="40"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout Spacing="20">
+            <!--
+                Xamarin.Forms DatePicker
+                
+                A Xamarin.Forms view that allows the user to select a date.
+                
+                The Xamarin.Forms DatePicker invokes the platform's date-picker control and allows the user to select a date. DatePicker defines eight properties:
+                
+                > MinimumDate of type DateTime, which defaults to the first day of the year 1900.
+                > MaximumDate of type DateTime, which defaults to the last day of the year 2100.
+                > Date of type DateTime, the selected date, which defaults to the value DateTime.Today.
+                > Format of type string, a standard or custom .NET formatting string, which defaults to "D", the long date pattern.
+                > TextColor of type Color, the color used to display the selected date, which defaults to Color.Default.
+                > FontAttributes of type FontAttributes, which defaults to FontAtributes.None.
+                > FontFamily of type string, which defaults to null.
+                > FontSize of type double, which defaults to -1.0.
+                > CharacterSpacing, of type double, is the spacing between characters of the DatePicker text.
+                > The DatePicker fires a DateSelected event when the user selects a date.
+                
+                Warning:
+                When setting MinimumDate and MaximumDate, make sure that MinimumDate is always less than or
+                equal to MaximumDate. Otherwise, DatePicker will raise an exception.
+                
+                Internally, the DatePicker ensures that Date is between MinimumDate and MaximumDate, inclusive.
+                If MinimumDate or MaximumDate is set so that Date is not between them,
+                DatePicker will adjust the value of Date.
+                
+                By default Date picker will get the date today, time not.
+            -->
+            <DatePicker />
+            <DatePicker
+                Date="March 30, 1996"
+                Format="MMM dd, yyyy"
+                MaximumDate="1 Dec 2020"
+                MinimumDate="1 Jan 1990" />
+            <DatePicker Date="{x:Static sys:DateTime.MaxValue}" />
+
+
+
+            <!--
+                Xamarin.Forms TimePicker
+                
+                A Xamarin.Forms view that allows the user to select a time.
+                
+                The Xamarin.Forms TimePicker invokes the platform's time-picker control and allows the user to select a time.
+                TimePicker defines the following properties:
+                
+                > Time of type TimeSpan, the selected time, which defaults to a TimeSpan of 0. The TimeSpan type indicates
+                a duration of time since midnight.
+                > Format of type string, a standard or custom .NET formatting string, which defaults to "t",
+                the short time pattern.
+                > TextColor of type Color, the color used to display the selected time, which defaults to Color.Default.
+                > FontAttributes of type FontAttributes, which defaults to FontAtributes.None.
+                > FontFamily of type string, which defaults to null.
+                > FontSize of type double, which defaults to -1.0.
+                > CharacterSpacing, of type double, is the spacing between characters of the TimePicker text.
+            -->
+
+            <TimePicker Time="13:00" />
+            <TimePicker />
+
+            <!--<SwitchCell Text="" Text="Notification" On="True" OnChanged=""/>-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage> 

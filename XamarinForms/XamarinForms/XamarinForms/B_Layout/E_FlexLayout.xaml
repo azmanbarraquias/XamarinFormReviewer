@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.B_Layout.E_FlexLayout"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Padding="10"
+    mc:Ignorable="d">
+
+    <!--
+        The Xamarin.Forms FlexLayout is new in Xamarin.Forms version 3.0.
+        It is based on the CSS Flexible Box Layout Module, commonly known as flex layout or flex-box, so called
+        because it includes many flexible options to arrange children within the layout.
+        
+        FlexLayout is similar to the Xamarin.Forms StackLayout in that it can arrange its children horizontally
+        and vertically in a stack. However, the FlexLayout is also capable of wrapping its children if there are
+        too many to fit in a single row or column, and also has many options for orientation, alignment,
+        and adapting to various screen sizes.
+        
+        Common usage scenarios:
+        The FlexLayoutDemos sample program contains several pages that demonstrate some common uses of
+        FlexLayout and allows you to experiment with its properties.
+        
+        https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/flex-layout
+    -->
+
+    <FlexLayout
+        AlignItems="Center"
+        BackgroundColor="LightSlateGray"
+        Direction="ColumnReverse"
+        JustifyContent="SpaceEvenly">
+
+        <Label FontSize="Large" Text="FlexLayout in Action" />
+
+
+        <Image Source="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/graphics/skiasharp/effects/blend-modes/porter-duff-images/seatedmonkey.jpg" />
+
+        <Button Text="Do-Nothing Button" />
+
+        <Label Text="Another Label" />
+    </FlexLayout>
+</ContentPage>

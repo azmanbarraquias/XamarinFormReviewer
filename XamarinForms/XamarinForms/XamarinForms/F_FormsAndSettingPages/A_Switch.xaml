@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.F_FormsAndSettingPages.A_Switch"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Switch"
+    NavigationPage.HasNavigationBar="{Binding Source={x:Reference SwitchX}, Path=IsToggled}"
+    mc:Ignorable="d">
+
+    <!--
+        The Xamarin.Forms Switch control is a horizontal toggle button that can be manipulated by
+        the user to toggle between on and off states, which are represented by a boolean value.
+        The Switch class inherits from View.
+        
+        The Switch control defines two properties:
+        
+        > IsToggled is a boolean value that indicates whether the Switch is on.
+        > OnColor is a Color that affects how the Switch is rendered in the toggled, or on, state.
+        > ThumbColor is the Color of the switch thumb.
+        
+        https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/switch
+    -->
+    <ContentPage.Content>
+        <StackLayout
+            HorizontalOptions="CenterAndExpand"
+            Spacing="10"
+            VerticalOptions="CenterAndExpand">
+            <BoxView BackgroundColor="Green" IsVisible="{Binding Source={x:Reference SwitchX}, Path=IsToggled}" />
+            <Switch
+                x:Name="SwitchX"
+                IsToggled="False"
+                OnColor="Blue"
+                ThumbColor="Red"
+                Toggled="Switch_Toggled" />
+            <Label x:Name="label" Text="Content" />
+            <Label Text="{Binding Source={x:Reference SwitchX}, Path=IsToggled, StringFormat='Value is {0}'}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

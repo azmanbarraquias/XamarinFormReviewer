@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.E_Navigation.B_ModalPages.WelcomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Welcome"
+    BackgroundColor="LightPink"
+    mc:Ignorable="d">
+
+    <!--
+        Xamarin.Forms provides support for modal pages. A modal page encourages users to complete a
+        self-contained task that cannot be navigated away from until the task is completed or cancelled.
+        This article demonstrates how to navigate to modal pages.
+        
+        This article discusses the following topics:
+        
+        > Performing navigation – pushing pages to the modal stack, popping pages from the modal stack,
+        disabling the back button, and animating page transitions.
+        > Passing data when navigating – passing data through a page constructor, and through a BindingContext.
+        
+        https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/navigation/modal
+    -->
+
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Label
+                FontAttributes="Bold"
+                FontSize="Large"
+                Text="Welcome to Xamarin.Forms! 1st Page "
+                TextColor="Black" />
+            <Button
+                BackgroundColor="Transparent"
+                Clicked="NextButton"
+                FontSize="Medium"
+                Text="Next"
+                TextColor="Blue" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

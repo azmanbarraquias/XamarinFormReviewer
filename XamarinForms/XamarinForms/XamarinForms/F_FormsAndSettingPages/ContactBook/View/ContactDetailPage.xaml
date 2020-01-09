@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.F_FormsAndSettingPages.ContactBook.View.ContactDetailPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="{Binding FullName}"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <TableView Intent="Data">
+            <TableRoot>
+                <TableSection Title="Name" TextColor="Red">
+                    <EntryCell
+                        x:Name="firstName"
+                        Placeholder="First Name"
+                        Text="{Binding FirstName}" />
+                    <EntryCell
+                        x:Name="lastName"
+                        Placeholder="Last Name"
+                        Text="{Binding LastName}" />
+                </TableSection>
+                <TableSection Title="Contact" TextColor="Red">
+                    <EntryCell
+                        x:Name="phone"
+                        Placeholder="Phone"
+                        Text="{Binding Phone}" />
+                    <EntryCell
+                        x:Name="email"
+                        Placeholder="Email"
+                        Text="{Binding Email}" />
+                </TableSection>
+                <TableSection
+                    x:Name="blocked"
+                    Title="Other"
+                    TextColor="Red">
+                    <SwitchCell On="{Binding Blocked}" Text="Blocked" />
+                </TableSection>
+                <TableSection>
+                    <ViewCell>
+                        <Button
+                            BackgroundColor="Transparent"
+                            Clicked="SaveContact"
+                            FontSize="Medium"
+                            Text="Save"
+                            TextColor="LightBlue" />
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

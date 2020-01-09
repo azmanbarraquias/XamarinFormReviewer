@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.B_Layout.D_RelativeLayout"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Padding="0,10,0,0"
+    mc:Ignorable="d">
+
+    <!--
+        RelativeLayout is used to position and size views relative to properties of the layout or sibling views
+        Unlike AbsoluteLayout, RelativeLayout does not have the concept of the moving anchor and does not have
+        facilities for positioning elements relative to the bottom or right edges of the layout. RelativeLayout
+        does support positioning elements outside of its own bounds.
+
+        Purpose
+        RelativeLayout can be used to position views on screen relative to the overall layout or to other views.
+
+        > Overlay Elements
+        > Apply constraints based on another element
+        > More control over position and size of elements
+        > Relative to another element
+
+        Usage:
+        Understanding Constraints,
+        Positioning and sizing a view within a RelativeLayout is done with constraints.
+        A constraint expression can include the following information:
+
+        Type – whether the constraint is relative to the parent or to another view.
+        Property – which property to use as the basis for the constraint.
+        Factor – the factor to apply to the property value.
+        Constant – the value to use as an offset of the value.
+        ElementName – the name of the view that the constraint is relative to.
+
+        https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/layouts/relative-layout
+
+        Attached Bindable Properties
+        > X Constraint
+        > Y Constraint
+        > Width / Height Constraint
+        > Bound Constraint
+
+        {} - xaml markup extension
+
+        Template:
+        <Control RelativeLayout.[Attached Bindable Properties]="{ConstraintExpression
+                                                Type= [RelativeTo(Parent/View)]
+                                                Property= [what property of Type? x,y,w,h]
+                                                if View > ElementName=ElementName of the view of Type RelativeToiew
+                                                Factor= [0 - 1] this control will factor
+                                                                to the property type multiple 0-1 float
+                                                Constant=2
+    -->
+
+    <RelativeLayout BackgroundColor="Aqua">
+        <BoxView
+            x:Name="RedBanner"
+            BackgroundColor="Red"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height,
+                                                                   Factor=0.3}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width,
+                                                                  Factor=1}" />
+
+        <BoxView
+            BackgroundColor="BlueViolet"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,
+                                                              ElementName=RedBanner,
+                                                              Property=Width,
+                                                              Factor=0.45}"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+                                                              ElementName=RedBanner,
+                                                              Constant=20,
+                                                              Property=Height,
+                                                              Factor=1}" />
+    </RelativeLayout>
+
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.E_Navigation.G_DisplayPopups.DisplayPopups"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Display Pop-Ups"
+    mc:Ignorable="d">
+
+    <!--
+        Displaying an alert, asking a user to make a choice, or displaying a prompt is a common UI task.
+        Xamarin.Forms has three methods on the Page class for interacting with the user via a pop-up:
+        DisplayAlert,
+        DisplayActionSheet, and
+        DisplayPromptAsync.
+        They are rendered with appropriate native controls on each platform.
+        
+        https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/pop-ups
+    -->
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Label x:Name="GreatHeader" Text="Welcome to Xamarin.Forms! " />
+            <Button
+                BackgroundColor="#4A90ED"
+                Clicked="DeleteClicked"
+                Text="Delete"
+                TextColor="White" />
+
+            <Button
+                BackgroundColor="#ED4A4A"
+                Clicked="ActionSheet_Clicked"
+                Text="ActionSheet Menu"
+                TextColor="White" />
+
+            <Button
+                BackgroundColor="#66F06B"
+                Clicked="ProptInput_Clicked"
+                Text="Propt Input"
+                TextColor="White" />
+
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

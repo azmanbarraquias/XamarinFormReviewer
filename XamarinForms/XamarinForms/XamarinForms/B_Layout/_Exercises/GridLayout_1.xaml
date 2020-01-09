@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.B_Layout._Exercises.GridLayout_1"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="#344141"
+    mc:Ignorable="d">
+
+    <Grid
+        Padding="40"
+        ColumnSpacing="10"
+        RowSpacing="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+
+        <Label
+            x:Name="DialInputDisplay"
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            FontSize="50"
+            HorizontalTextAlignment="Center"
+            Text=""
+            TextColor="White"
+            VerticalTextAlignment="Center" />
+
+        <Button
+            Grid.Row="1"
+            Grid.Column="0"
+            BackgroundColor="White"
+            BorderRadius="30"
+            BorderWidth="4"
+            Clicked="DialButton1"
+            FontSize="40"
+            Text="1"
+            TextColor="Black" />
+        <Button
+            Grid.Row="1"
+            Grid.Column="1"
+            BackgroundColor="White"
+            BorderRadius="30"
+            BorderWidth="4"
+            Clicked="DialButton2"
+            FontSize="40"
+            Text="2"
+            TextColor="Black" />
+        <Button
+            Grid.Row="1"
+            Grid.Column="2"
+            BackgroundColor="White"
+            BorderRadius="30"
+            BorderWidth="4"
+            Clicked="DialButton3"
+            FontSize="40"
+            Text="3"
+            TextColor="Black" />
+
+        <Button
+            Grid.Row="2"
+            Grid.Column="0"
+            BackgroundColor="White"
+            BorderRadius="30"
+            BorderWidth="4"
+            Clicked="DialButton4"
+            FontSize="40"
+            Text="4"
+            TextColor="Black" />
+        <Button
+            Grid.Row="2"
+            Grid.Column="1"
+            BackgroundColor="White"
+            BorderRadius="30"
+            BorderWidth="4"
+            Clicked="DialButton5"
+            FontSize="40"
+            Text="5"
+            TextColor="Black" />
+        <Button
+            Grid.Row="2"
+            Grid.Column="2"
+            BackgroundColor="White"
+            BorderRadius="30"
+            BorderWidth="4"
+            Clicked="DialButton6"
+            FontSize="40"
+            Text="6"
+            TextColor="Black" />
+
+        <Button
+            Grid.Row="3"
+            Grid.Column="0"
+            BackgroundColor="White"
+            BorderRadius="30"
+            BorderWidth="4"
+            Clicked="DialButton7"
+            FontSize="40"
+            Text="7"
+            TextColor="Black" />
+        <Button
+            Grid.Row="3"
+            Grid.Column="1"
+            BackgroundColor="White"
+            BorderRadius="30"
+            BorderWidth="4"
+            Clicked="DialButton8"
+            FontSize="40"
+            Text="8"
+            TextColor="Black" />
+        <Button
+            Grid.Row="3"
+            Grid.Column="2"
+            BackgroundColor="White"
+            BorderRadius="30"
+            BorderWidth="4"
+            Clicked="DialButton9"
+            FontSize="40"
+            Text="9"
+            TextColor="Black" />
+
+        <Button
+            Grid.Row="4"
+            Grid.Column="0"
+            BackgroundColor="White"
+            BorderRadius="30"
+            BorderWidth="4"
+            Clicked="DialButtonAsterisk"
+            FontSize="40"
+            Text="*"
+            TextColor="Black" />
+        <Button
+            Grid.Row="4"
+            Grid.Column="1"
+            BackgroundColor="White"
+            BorderRadius="30"
+            BorderWidth="4"
+            Clicked="DialButton0"
+            FontSize="40"
+            Text="0"
+            TextColor="Black" />
+        <Button
+            Grid.Row="4"
+            Grid.Column="2"
+            BackgroundColor="White"
+            BorderRadius="30"
+            BorderWidth="4"
+            Clicked="DialButtonHash"
+            FontSize="40"
+            Text="#"
+            TextColor="Black" />
+
+        <ImageButton
+            Grid.Row="5"
+            Grid.Column="0"
+            BackgroundColor="Transparent"
+            BorderWidth="4"
+            Clicked="SaveDialNumber"
+            Source="https://img.icons8.com/dusk/64/000000/iron-man.png" />
+
+        <Button
+            Grid.Row="5"
+            Grid.Column="1"
+            BackgroundColor="#95CC13"
+            BorderRadius="30"
+            BorderWidth="4"
+            Clicked="DialButton"
+            FontAttributes="Bold"
+            FontSize="Large"
+            Text="Dial"
+            TextColor="Black" />
+        <Button
+            Grid.Row="5"
+            Grid.Column="2"
+            BackgroundColor="Black"
+            BorderRadius="30"
+            BorderWidth="4"
+            Clicked="ClearDialDisplay"
+            FontSize="Large"
+            Text="X"
+            TextColor="White" />
+    </Grid>
+</ContentPage>

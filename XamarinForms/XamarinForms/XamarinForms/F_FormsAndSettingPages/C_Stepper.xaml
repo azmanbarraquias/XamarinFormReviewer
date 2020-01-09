@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.F_FormsAndSettingPages.C_Stepper"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Stepper"
+    mc:Ignorable="d">
+
+    <!--
+        Xamarin.Forms Stepper
+        
+        Use a Stepper for selecting a numeric value from a range of values.
+        
+        The Xamarin.Forms Stepper consists of two buttons labeled with minus and plus signs.
+        These buttons can be manipulated by the user to incrementally select a double value from a range of values.
+        
+        The Stepper defines four properties of type double:
+        
+        > Increment is the amount to change the selected value by, with a default value of 1.
+        > Minimum is the minimum of the range, with a default value of 0.
+        > Maximum is the maximum of the range, with a default value of 100.
+        > Value is the stepper's value, which can range between Minimum and Maximum and has a default value of 0.
+        
+        All of these properties are backed by BindableProperty objects. The Value property has a default
+        binding mode of BindingMode.TwoWay, which means that it's suitable as a binding source in an application
+        that uses the Model-View-ViewModel (MVVM) architecture.
+        
+        Warning
+        
+        Internally, the Stepper ensures that Minimum is less than Maximum.
+        If Minimum or Maximum are ever set so that Minimum is not less than Maximum, an exception is raised.
+        For more information on setting the Minimum and Maximum properties, see Precautions section.
+        
+        https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/stepper
+    -->
+
+    <StackLayout
+        Padding="20"
+        BackgroundColor="#D289F7"
+        HorizontalOptions="CenterAndExpand"
+        Spacing="20"
+        VerticalOptions="CenterAndExpand">
+
+        <Label
+            FontSize="{Binding Source={x:Reference StepperX}, Path=Value}"
+            HorizontalOptions="Center"
+            Text="{Binding Source={x:Reference StepperX}, Path=Value}" />
+
+        <Stepper
+            x:Name="StepperX"
+            Increment="2"
+            Maximum="100"
+            Minimum="1"
+            Value="50" />
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.E_Navigation.H_ToolbarItem.ToolbarItemMenu"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Toolbar Item"
+    BackgroundColor="Aqua"
+    mc:Ignorable="d">
+
+    <!--
+        The Xamarin.Forms ToolbarItem class is a special type of button that can be added to a
+        Page object's ToolbarItems collection. Each ToolbarItem object will appear as a button in the application's
+        navigation bar. A ToolbarItem instance can have an icon and appear as a primary or secondary menu item.
+        The ToolbarItem class inherits from MenuItem.
+        
+        Note that! Toolbar Item only apear on if the page has navigation bar.
+        
+        > Icon only show on Primary
+        > Activated is Obselete, use Clicked insted
+    -->
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Activated="ToolbarItem_Activated"
+            IconImageSource="hamburgerIcon.png"
+            Order="Primary"
+            Text="Menu" />
+        <ToolbarItem
+            Activated="ToolbarItem_Activated_1"
+            IconImageSource="Icon512.png"
+            Order="Secondary"
+            Text="Menu 1" />
+
+        <ToolbarItem
+            Clicked="ToolbarItem_Clicked"
+            Order="Secondary"
+            Text="Menu 2" />
+
+        <ToolbarItem Order="Secondary" Text="Menu 3" />
+
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                HorizontalOptions="CenterAndExpand"
+                Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

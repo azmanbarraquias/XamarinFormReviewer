@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.F_FormsAndSettingPages.F_Picker"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Picker"
+    Padding="15"
+    mc:Ignorable="d">
+
+    <!--
+        The Picker view is a control for selecting a text item from a list of data.
+        
+        The Xamarin.Forms Picker displays a short list of items, from which the user can select an item.
+        Picker defines the following properties:
+        
+        Title of type string, which defaults to null.
+        TitleColor of type Color, the color used to display the Title text.
+        ItemsSource of type IList, the source list of items to display, which defaults to null.
+        SelectedIndex of type int, the index of the selected item, which defaults to -1.
+        SelectedItem of type object, the selected item, which defaults to null.
+        TextColor of type Color, the color used to display the text, which defaults to Color.Default.
+        FontAttributes of type FontAttributes, which defaults to FontAtributes.None.
+        FontFamily of type string, which defaults to null.
+        FontSize of type double, which defaults to -1.0.
+        CharacterSpacing, of type double, is the spacing between characters of the item displayed by the Picker.
+        All of the properties are backed by BindableProperty objects, which means that they can be styled,
+        and the properties can be targets of data bindings. The SelectedIndex and SelectedItem properties have
+        a default binding mode of BindingMode.TwoWay, which means that they can be targets of data bindings in
+        an application that uses the Model-View-ViewModel (MVVM) architecture. For information
+        about setting font properties, see Fonts.
+        
+        https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/picker/
+    -->
+
+    <StackLayout>
+
+        <Picker
+            x:Name="PickerX"
+            Title="Picker"
+            SelectedIndexChanged="Picker_SelectedIndexChanged_Red"
+            TitleColor="Red" />
+
+        <Picker
+            x:Name="PickerMenu"
+            Title="Picker XAML"
+            HorizontalOptions="FillAndExpand"
+            SelectedIndexChanged="Picker_SelectedIndexChanged_Blue"
+            TitleColor="Blue">
+            <Picker.Items>
+                <!--  By Xaml  -->
+                <x:String>Share</x:String>
+                <x:String>Delete</x:String>
+                <x:String>Copy</x:String>
+                <x:String>Cut</x:String>
+                <x:String>Paste</x:String>
+            </Picker.Items>
+        </Picker>
+
+    </StackLayout>
+
+</ContentPage>

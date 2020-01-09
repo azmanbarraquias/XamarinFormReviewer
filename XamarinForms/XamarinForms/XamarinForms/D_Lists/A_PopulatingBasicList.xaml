@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.D_Lists.A_PopulatingBasicList"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Padding="10"
+    mc:Ignorable="d">
+
+    <!--
+        Use cases
+        A ListView control can be used in any situation where you're displaying scrollable lists of data.
+        The ListView class supports context actions and data binding.
+        
+        The ListView control shouldn't be confused with the TableView control.
+        The TableView control is a better option whenever you have a non-bound list of options
+        data because it allows predefined options to be specified in XAML. For example, the iOS settings app,
+        which has a mostly predefined set of options, is better suited to use a TableView than a ListView.
+        
+        The ListView class doesn't support defining list items in XAML, you must use the ItemsSource
+        property or data binding with an ItemTemplate to define items in the list.
+        
+        A ListView is best suited for a collections consisting of a single data type. This requirement
+        is because only one type of cell can be used for each row in the list. The TableView control
+        can support multiple cell types, so it is a better option when you need to display multiple data types.
+        
+        For more information about binding data to a ListView instance, see ListView data sources.
+        
+        Components
+        The ListView control has a number of components available to exercise the native functionality
+        of each platform. These components are defined in the following sections.
+        
+        Headers and footers
+        Header and footer components display at the beginning and end of a list, separate from list's data.
+        Headers and footers can be bound to a separate data source from the ListView's data source.
+        
+        Functionality
+        The ListView class supports a number of interaction styles.
+        
+        Pull-to-refresh allows the user to pull the ListView down to refresh the contents.
+        Context actions allow the developer to specify custom actions on individual list items.
+        For example, you can implement swipe-to-action on iOS, or long-tap actions on Android.
+        Selection allow the developer to attach functionality to selection and deselection events on list items.
+        
+        https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/
+    -->
+    <StackLayout>
+        <ListView
+            x:Name="listView"
+            BackgroundColor="LightGreen"
+            ItemTapped="CellListView_ItemTapped"
+            SeparatorColor="Blue" />
+        <Button Clicked="AddMoreButton" Text="Add More" />
+        <ListView BackgroundColor="Aqua" ItemTapped="CellListView_ItemTapped1">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>mono</x:String>
+                    <x:String>monodroid</x:String>
+                    <x:String>monotouch</x:String>
+                    <x:String>monorail</x:String>
+                    <x:String>monodevelop</x:String>
+                    <x:String>monotone</x:String>
+                    <x:String>monopoly</x:String>
+                    <x:String>monomodal</x:String>
+                    <x:String>mononucleosis</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

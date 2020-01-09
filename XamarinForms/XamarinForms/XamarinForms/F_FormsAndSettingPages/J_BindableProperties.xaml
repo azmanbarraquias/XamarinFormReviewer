@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.F_FormsAndSettingPages.J_BindableProperties"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:local="clr-namespace:XamarinForms.F_FormsAndSettingPages.Extensions"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <!--
+        Xamarin.Forms Bindable Properties.
+        
+        Bindable properties extend CLR property functionality by backing a property with a BindableProperty type,
+        instead of backing a property with a field. The purpose of bindable properties is to provide a property
+        system that supports data binding, styles, templates, and values set through parent-child relationships.
+        In addition, bindable properties can provide default values, validation of property values, and callbacks
+        that monitor property changes.
+        
+        Properties should be implemented as bindable properties to support one or more of the following features:
+        
+        Acting as a valid target property for data binding.
+        Setting the property through a style.
+        Providing a default property value that's different from the default for the type of the property.
+        Validating the value of the property.
+        Monitoring property changes.
+        Examples of Xamarin.Forms bindable properties include Label.Text, Button.BorderRadius, and
+        StackLayout.Orientation. Each bindable property has a corresponding public static readonly property
+        of type BindableProperty that is exposed on the same class and that is the identifier of the bindable
+        property. For example, the corresponding bindable property identifier for the Label.Text
+        property is Label.TextProperty.
+        
+        https://docs.microsoft.com/en-us/xamarin/xamarin-forms/xaml/bindable-properties
+    -->
+    <TableView Intent="Form">
+        <TableRoot>
+            <TableSection Title="Forms">
+                <SwitchCell Text="Active Notification" />
+
+                <!--  Extension ViewCell  -->
+                <local:DataCell Label="Start" />
+                <local:DataCell Label="End" />
+
+
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

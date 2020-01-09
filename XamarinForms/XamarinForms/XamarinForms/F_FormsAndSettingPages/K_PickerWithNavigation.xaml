@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.F_FormsAndSettingPages.K_PickerWithNavigation"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:local="clr-namespace:XamarinForms.F_FormsAndSettingPages.Extensions"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <TableView Intent="Form">
+        <TableRoot>
+            <TableSection Title="Basics" TextColor="Black">
+
+                <TextCell Detail="Azman" Text="Name" />
+
+                <EntryCell Label="Title" Placeholder="(eg Shopping)" />
+
+                <SwitchCell On="true" Text="Notifications" />
+
+                <local:DataCell Label="Starts" />
+                <local:DataCell Label="Ends" />
+
+                <ViewCell Tapped="ViewCell_Tapped">
+                    <StackLayout Padding="13,5" Orientation="Horizontal">
+                        <Label Text="Contact Method" VerticalOptions="Center" />
+                        <Label
+                            x:Name="contactMethod"
+                            HorizontalOptions="EndAndExpand"
+                            Text="None"
+                            TextColor="Gray"
+                            VerticalOptions="Center" />
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

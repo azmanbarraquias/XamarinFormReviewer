@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.A_XAMLEssentials.C.AccessingElementsInCodeBehind"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="BlueViolet"
+    mc:Ignorable="d">
+    <StackLayout HorizontalOptions="Fill" VerticalOptions="CenterAndExpand">
+        <!--
+            'x' is a prefix which is declare on xmlns:x microsoft
+            namespace declaration 'Name' belong to the standard xaml
+        -->
+        <Label
+            x:Name="SliderHeaderText"
+            FontAttributes="Bold"
+            FontSize="30"
+            HorizontalTextAlignment="Center"
+            Text="ERROR Slider not set"
+            TextColor="Black"
+            VerticalOptions="Center" />
+
+        <!--  Default fill and expand base on parent  -->
+        <Slider x:Name="slider" ValueChanged="SlideValueChanged" />
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.B_Layout._Exercises.RelativeLayout_1"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <RelativeLayout>
+        <StackLayout
+            x:Name="Banner"
+            BackgroundColor="Pink"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height,
+                                                                   Factor=0.3}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width,
+                                                                  Factor=1}">
+            <StackLayout
+                Padding="25,0,25,5"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="55"
+                    HorizontalOptions="Center"
+                    Text="$11.95"
+                    TextColor="#33353A" />
+                <Button
+                    BackgroundColor="#0095A4"
+                    BorderRadius="20"
+                    HeightRequest="40"
+                    Text="Add $7.99 Credit"
+                    TextColor="White" />
+            </StackLayout>
+        </StackLayout>
+        <StackLayout RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Banner, Constant=30, Property=Height, Factor=0.9}">
+            <StackLayout>
+                <Label
+                    Padding="20"
+                    FontAttributes="Bold"
+                    FontSize="Body"
+                    HorizontalTextAlignment="Center"
+                    Text=" Why pat for creidt?"
+                    TextColor="Black" />
+                <Label
+                    Padding="13,0,13,10"
+                    FontSize="15"
+                    HorizontalTextAlignment="Center">
+                    Because	you	can	reach people who aren’t on SkyApp by calling mobile and landline numbers, or spending SMS, at low-cost rates.
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </RelativeLayout>
+</ContentPage>

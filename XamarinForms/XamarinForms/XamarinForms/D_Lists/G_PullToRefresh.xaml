@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.D_Lists.G_PullToRefresh"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <!--
+        ItemSelected is a state while ItemTapped is a motion event. All views can be tapped and if
+        I remember correctly all views can be selected (or at least activated there is a subtle difference),
+        the two don't have to go together but they usually do.
+        
+        For example you'd have an item's selected state toggled each time a tapped motion event has occurred.
+        Once again just to make it more clear you can associate the changes of the selected state to whatever
+        you need whether it's a motion event like tapping or long pressing or double tapping and so on
+        or to some other event or logic.
+    -->
+
+    <StackLayout>
+        <ListView
+            x:Name="contactListView"
+            IsPullToRefreshEnabled="True"
+            ItemSelected="CellListView_ItemSelected"
+            ItemTapped="CellListView_ItemTapped"
+            Refreshing="ContactListView_Refreshing">
+            <ListView.ItemTemplate>
+                <!--  ItemTemplate which is template of each item on the list  -->
+                <DataTemplate>
+                    <TextCell Detail="{Binding Status}" Text="{Binding Name}">
+                        <!--  Property Element Syntax so that we can use one of the property of TextCell  -->
+                        <TextCell.ContextActions>
+                            <!--
+                                CommandParameter="{Binding .}"
+                                Binding to period ( . ) meaning we bind all the information of the MenuItem
+                                such as the info of this Contact item.
+                            -->
+                            <MenuItem
+                                Clicked="Call_Clicked"
+                                CommandParameter="{Binding .}"
+                                Text="Call" />
+                            <MenuItem
+                                Clicked="Delete_Clicked"
+                                CommandParameter="{Binding .}"
+                                IsDestructive="True"
+                                Text="Delete" />
+                        </TextCell.ContextActions>
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

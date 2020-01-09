@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.C_Images.C_ActivityIndicator"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Padding="10"
+    BackgroundColor="Aqua"
+    mc:Ignorable="d">
+
+    <!--
+        The Xamarin.Forms ActivityIndicator control displays an animation to show that the application
+        is engaged in a lengthy activity. Unlike the ProgressBar, the ActivityIndicator gives no indication
+        of progress. The ActivityIndicator inherits from View.
+        
+        The ActivityIndicator control defines the following properties:
+        
+        > Color is a Color value that defines the display color of the ActivityIndicator.
+        > IsRunning is a bool value that indicates whether the ActivityIndicator should be visible and
+        animating, or hidden. When the value is false the ActivityIndicator isn't visible.
+    -->
+    <AbsoluteLayout>
+        <Image
+            x:Name="Image1"
+            AbsoluteLayout.LayoutBounds="0.5, 0,  1, 0.35"
+            AbsoluteLayout.LayoutFlags="All"
+            Aspect="AspectFit"
+            BackgroundColor="BlueViolet"
+            Source="https://i.picsum.photos/id/50/536/354.jpg?" />
+        <ActivityIndicator
+            AbsoluteLayout.LayoutBounds="0.5, 0, 0.5, 0.25"
+            AbsoluteLayout.LayoutFlags="All"
+            IsRunning="True"
+            Color="Green" />
+
+        <Image
+            x:Name="Image2"
+            AbsoluteLayout.LayoutBounds="0.5, 0.6,  1, 0.35"
+            AbsoluteLayout.LayoutFlags="All"
+            Aspect="AspectFit"
+            BackgroundColor="BlueViolet"
+            Source="https://i.picsum.photos/id/50/536/354.jpg?" />
+        <ActivityIndicator
+            AbsoluteLayout.LayoutBounds="0.5, 0.6, 0.5, 0.25"
+            AbsoluteLayout.LayoutFlags="All"
+            IsRunning="True"
+            Color="Green" />
+        <!--  IsRunning="{Binding Source={x:Reference Image2}, Path=IsLoading}" />  -->
+    </AbsoluteLayout>
+</ContentPage>

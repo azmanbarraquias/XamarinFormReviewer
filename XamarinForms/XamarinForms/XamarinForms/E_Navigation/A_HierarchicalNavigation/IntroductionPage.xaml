@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.E_Navigation.A_HierarchicalNavigation.IntroductionPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Introduction"
+    BackgroundColor="Aqua"
+    NavigationPage.HasBackButton="False"
+    NavigationPage.TitleIconImageSource="Icon512.png"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Label
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+                Text="This is how the app works. 2nd Page"
+                TextColor="Black" />
+            <Button
+                BackgroundColor="Transparent"
+                Clicked="BackButton"
+                FontSize="Medium"
+                Text="Back"
+                TextColor="Blue" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

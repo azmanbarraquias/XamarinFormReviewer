@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.F_FormsAndSettingPages.E_EntryAndEditor"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Entry and Editor"
+    mc:Ignorable="d">
+
+    <!--
+        Xamarin.Forms Entry
+        Single-line text or password input
+        
+        The Xamarin.Forms Entry is used for single-line text input. The Entry, like the Editor view,
+        supports multiple keyboard types. Additionally, the Entry can be used as a password field.
+    -->
+
+    <StackLayout Padding="20">
+        <Entry
+            MaxLength="10"
+            Placeholder="Username"
+            TextChanged="Entry_TextChanged" />
+
+        <Entry Keyboard="Numeric" Placeholder="Phone Number" />
+
+        <Entry Keyboard="Telephone" Placeholder="Home Phone number" />
+
+        <Entry IsReadOnly="True" Text="Default Value" />
+
+        <Entry
+            Completed="Entry_Completed"
+            IsPassword="{Binding Source={x:Reference SwitchViewPassword}, Path=IsToggled}"
+            Placeholder="Password" />
+
+        <Switch
+            x:Name="SwitchViewPassword"
+            HorizontalOptions="Start"
+            IsToggled="True" />
+
+        <Label Text="" />
+
+        <Label x:Name="Label" Text="Text" />
+
+        <!--
+            Multi-line text input
+            
+            The Editor control is used to accept multi-line input. This article covers:
+            
+            Customization – keyboard and color options.
+            Interactivity – events that can be listened for to provide interactivity.
+        -->
+
+        <Editor
+            IsTextPredictionEnabled="False"
+            Keyboard="Text"
+            Placeholder="long text (Editor)"
+            VerticalOptions="FillAndExpand" />
+    </StackLayout>
+</ContentPage>
