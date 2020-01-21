@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace XamarinForms.A_XAMLEssentials.A
+namespace XamarinForms.A_XAMLEssentials
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class XAMLvsCode : ContentPage
+    public partial class A_XAMLvsCode : ContentPage
     {
-        public XAMLvsCode()
+        public A_XAMLvsCode()
         {
             InitializeComponent(); // XAML called 1st
                                    // XAML will be extrated to assemply the passed to xaml parser and generate UI like codebehind

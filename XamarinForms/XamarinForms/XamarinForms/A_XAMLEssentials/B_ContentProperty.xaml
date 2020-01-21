@@ -1,13 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <!-- <ContentPage/> cannot take a multiple view,
     Solution is to create a Type of Layout such as StackLayout..etc
     then you will able to create multiple view on that child layout-->
 <ContentPage
-    x:Class="XamarinForms.A_XAMLEssentials.B.ContentProperty"
+    x:Class="XamarinForms.A_XAMLEssentials.B_ContentProperty"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Content Property"
     Padding="5"
     BackgroundColor="Black"
     mc:Ignorable="d">

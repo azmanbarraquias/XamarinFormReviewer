@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace XamarinForms.A_XAMLEssentials.F
+namespace XamarinForms.A_XAMLEssentials
 {
     [XamlCompilation(XamlCompilationOptions.Compile)] // you can change to .Skip
-    public partial class DeviceDifferences : ContentPage
+    public partial class F_DeviceDifferences : ContentPage
     {
-        public DeviceDifferences()
+        public F_DeviceDifferences()
         {
             InitializeComponent();
-            //DeviceDifferencesChecker();
+            DeviceDifferencesChecker();
         }
 
         public void DeviceDifferencesChecker()
@@ -24,16 +24,20 @@ namespace XamarinForms.A_XAMLEssentials.F
             {
                 //Do Something
                 Padding = new Thickness(10, 0, 0, 0);
+                titleText.Text = "This Platform is " + Device.RuntimePlatform;
             }
             if (Device.RuntimePlatform == Device.Android)
             {
                 //Do Something
-                Padding = new Thickness(20, 0, 0, 0);
+                Padding = new Thickness(20, 0, 20, 0);
+                titleText.Text = "This Platform is " + Device.RuntimePlatform;
+
             }
             if (Device.RuntimePlatform == Device.UWP)
             {
                 //Do Something
                 Padding = new Thickness(30, 0, 0, 0);
+                titleText.Text = "This Platform is " + Device.RuntimePlatform;
             }
         }
 

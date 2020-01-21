@@ -7,12 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using XamarinForms.A_XAMLEssentials.A;
-using XamarinForms.A_XAMLEssentials.B;
-using XamarinForms.A_XAMLEssentials.C;
-using XamarinForms.A_XAMLEssentials.D;
-using XamarinForms.A_XAMLEssentials.E;
-using XamarinForms.A_XAMLEssentials.F;
+using XamarinForms.A_XAMLEssentials;
 using XamarinForms.A_XAMLEssentials._Exercise;
 
 using XamarinForms.B_Layout;

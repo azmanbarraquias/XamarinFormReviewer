@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="XamarinForms.A_XAMLEssentials.E.BindingContext"
+    x:Class="XamarinForms.A_XAMLEssentials.D_DataBinding"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Data Binding"
     BackgroundColor="BlueViolet"
     mc:Ignorable="d">
     <!--
@@ -27,42 +28,25 @@
         For attribute usage, markup extensions use the known character sequence of an opening curly brace { to enter the markup
         extension scope, and a closing curly brace } to exit
     -->
-
-    <!--
-        More Manage Using BindingContext
-        You can also put this BindingContext on LayoutParent
-        so the child can use the binding value or it will be inherited to all of its child
-    -->
-
-    <!--
-        Xamarin Forms Binding. Binding, in the most common context,
-        is the process of mapping a property on a Page, to a property in a ViewModel.
-        In Xamarin Forms terms, the Page is a BindableObject and the BindableObject has
-        a BindingContext, which would be the ViewModel.
-    -->
-    <StackLayout
-        BindingContext="{x:Reference slider}"
-        HorizontalOptions="Fill"
-        VerticalOptions="CenterAndExpand">
-
+    <StackLayout HorizontalOptions="Fill" VerticalOptions="CenterAndExpand">
         <Label
             HorizontalTextAlignment="Center"
-            Text="Binding Context"
+            Text="Data Binding"
             TextColor="Black"
             VerticalOptions="Center" />
-
-        <BoxView Opacity="{Binding Value}" Color="Green" />
-
         <Label
+            x:Name="SliderHeaderText"
             FontAttributes="Bold"
             FontSize="30"
             HorizontalTextAlignment="Center"
-            Opacity="{Binding Value}"
-            Text="{Binding Value, StringFormat='Value is {0:F2}'}"
+            Text="{Binding Source={x:Reference slider}, StringFormat='Value is {0:F2}', Path=Value}"
             TextColor="Black"
             VerticalOptions="Center" />
 
         <!--  Default fill and expand base on parent  -->
-        <Slider x:Name="slider" />
+        <Slider
+            x:Name="slider"
+            Maximum="100"
+            Minimum="0" />
     </StackLayout>
 </ContentPage>

@@ -43,8 +43,23 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="A_XAMLEssentials\A\XAMLvsCode.xaml.cs">
-      <DependentUpon>XAMLvsCode.xaml</DependentUpon>
+    <Compile Update="A_XAMLEssentials\A_XAMLvsCode.xaml.cs">
+      <DependentUpon>A_XAMLvsCode.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="A_XAMLEssentials\B_ContentProperty.xaml.cs">
+      <DependentUpon>B_ContentProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="A_XAMLEssentials\C_AccessingElementsInCodeBehind.xaml.cs">
+      <DependentUpon>C_AccessingElementsInCodeBehind.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="A_XAMLEssentials\D_DataBinding.xaml.cs">
+      <DependentUpon>D_DataBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="A_XAMLEssentials\E_BindingContext.xaml.cs">
+      <DependentUpon>E_BindingContext.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="A_XAMLEssentials\F_DeviceDifferences.xaml.cs">
+      <DependentUpon>F_DeviceDifferences.xaml</DependentUpon>
     </Compile>
     <Compile Update="D_Lists\B_CellAppearance.xaml.cs">
       <DependentUpon>B_CellAppearance.xaml</DependentUpon>
@@ -64,22 +79,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="A_XAMLEssentials\A\XAMLvsCode.xaml">
+    <EmbeddedResource Update="A_XAMLEssentials\A_XAMLvsCode.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="A_XAMLEssentials\B\ContentProperty.xaml">
+    <EmbeddedResource Update="A_XAMLEssentials\B_ContentProperty.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="A_XAMLEssentials\C\AccessingElementsInCodeBehind.xaml">
+    <EmbeddedResource Update="A_XAMLEssentials\C_AccessingElementsInCodeBehind.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="A_XAMLEssentials\D\DataBinding.xaml">
+    <EmbeddedResource Update="A_XAMLEssentials\D_DataBinding.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="A_XAMLEssentials\E\BindingContext.xaml">
+    <EmbeddedResource Update="A_XAMLEssentials\E_BindingContext.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="A_XAMLEssentials\F\DeviceDifferences.xaml">
+    <EmbeddedResource Update="A_XAMLEssentials\F_DeviceDifferences.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="A_XAMLEssentials\_Exercise\QuotesPage.xaml">

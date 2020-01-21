@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace XamarinForms.A_XAMLEssentials.E
+namespace XamarinForms.A_XAMLEssentials
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class BindingContext : ContentPage
+    public partial class E_BindingContext : ContentPage
     {
-        public BindingContext()
+        public E_BindingContext()
         {
             InitializeComponent();
         }

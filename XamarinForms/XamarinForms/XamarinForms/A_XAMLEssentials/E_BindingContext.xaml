@@ -1,32 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="XamarinForms.A_XAMLEssentials.F.DeviceDifferences"
+    x:Class="XamarinForms.A_XAMLEssentials.E_BindingContext"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Binding Context"
     BackgroundColor="BlueViolet"
     mc:Ignorable="d">
-
-    <!--
-        TOPIC:
-        > XAML vs Code
-        > Accessing Elements in Code-behind
-        > Data Binding
-        > Binding Context
-        > Dealing with Device Differences
-        > Property Element Syntax
-        > XAML Compilation
-    -->
-
-    <!--  Device Deferences  -->
-    <ContentPage.Padding>
-        <OnPlatform
-            x:TypeArguments="Thickness"
-            Android="20"
-            iOS="0, 20, 0 ,0" />
-    </ContentPage.Padding>
-
     <!--
         'x' is a prefix which is declare on xmlns:x microsoft
         namespace declaration 'Name' belong to the standard xaml

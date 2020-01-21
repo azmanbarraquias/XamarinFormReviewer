@@ -2,13 +2,9 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using XamarinForms.A_XAMLEssentials.A;
-using XamarinForms.A_XAMLEssentials.B;
-using XamarinForms.A_XAMLEssentials.C;
-using XamarinForms.A_XAMLEssentials.D;
-using XamarinForms.A_XAMLEssentials.E;
-using XamarinForms.A_XAMLEssentials.F;
 using XamarinForms.A_XAMLEssentials._Exercise;
+using XamarinForms.A_XAMLEssentials;
+
 
 using XamarinForms.B_Layout;
 using XamarinForms.B_Layout._Exercises;
@@ -53,7 +49,7 @@ namespace XamarinForms
             // new NavigationPage ( new yourPage() ); - is to implement Navigation fuction
 
             // Starting point of page
-            MainPage = new NavigationPage(new D_FileSystem());
+            MainPage = new NavigationPage(new F_DeviceDifferences());
         }
 
         protected override void OnStart()

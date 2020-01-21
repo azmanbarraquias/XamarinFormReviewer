@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace XamarinForms.A_XAMLEssentials.C
+namespace XamarinForms.A_XAMLEssentials
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AccessingElementsInCodeBehind : ContentPage
+    public partial class C_AccessingElementsInCodeBehind : ContentPage
     {
-        public AccessingElementsInCodeBehind()
+        public C_AccessingElementsInCodeBehind()
         {
             InitializeComponent();
 
