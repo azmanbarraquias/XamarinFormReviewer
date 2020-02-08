@@ -34,5 +34,10 @@ namespace XamarinForms.E_Navigation.H_ToolbarItem
             var getTxt = (sender as ToolbarItem).Text;
             DisplayAlert("", "This is menu item: " + getTxt, "Ok");
         }
+
+        private void OnAdd(object sender, EventArgs e)
+        {
+
+        }
     }
 }

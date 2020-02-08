@@ -15,7 +15,6 @@ using XamarinForms.C_Images._Exercises;
 using XamarinForms.D_Lists;
 using XamarinForms.D_Lists._Excercies;
 
-//using XamarinForms.E_Navigation.
 using XamarinForms.E_Navigation.A_HierarchicalNavigation;
 using XamarinForms.E_Navigation.B_ModalPages;
 using XamarinForms.E_Navigation.C_PassingData;
@@ -49,7 +48,7 @@ namespace XamarinForms
             // new NavigationPage ( new yourPage() ); - is to implement Navigation fuction
 
             // Starting point of page
-            MainPage = new NavigationPage(new F_DeviceDifferences());
+            MainPage = new NavigationPage(new F_ContextActions());
         }
 
         protected override void OnStart()

@@ -15,7 +15,6 @@ namespace XamarinForms.F_FormsAndSettingPages.ContactBookByMosh
 	public partial class ContactsPage : ContentPage
 	{
 		private readonly ObservableCollection<Contact> _contacts;
-
 		public ContactsPage()
 		{
 			InitializeComponent();

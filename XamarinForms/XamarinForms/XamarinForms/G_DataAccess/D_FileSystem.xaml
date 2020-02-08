@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="File System IO"
     mc:Ignorable="d">
     <!--
         File Handling in Xamarin.Forms
@@ -26,11 +27,49 @@
         https://docs.microsoft.com/en-us/xamarin/xamarin-forms/data-cloud/data/files?tabs=windows
     -->
     <ContentPage.Content>
-        <StackLayout>
-            <Button
-                HorizontalOptions="CenterAndExpand"
-                Text="SaveTxt"
-                VerticalOptions="CenterAndExpand" />
+        <StackLayout Padding="10">
+            <Label
+                FontAttributes="Bold"
+                FontSize="20"
+                Text="Save and Load Text"
+                TextColor="Black" />
+            <Label FontSize="Title" Text="Type below and Press Save, then load Text" />
+            <Entry x:Name="InputField" />
+            <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                <Button
+                    Clicked="SaveButton"
+                    FontSize="10"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Save"
+                    VerticalOptions="CenterAndExpand" />
+                <Button
+                    Clicked="LoadButton"
+                    FontSize="10"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Load"
+                    VerticalOptions="CenterAndExpand" />
+            </StackLayout>
+            <Label
+                x:Name="LoadTxtDisplay"
+                Padding="10"
+                BackgroundColor="LightGray"
+                HorizontalOptions="Fill"
+                Text="..."
+                VerticalOptions="FillAndExpand" />
+            <Label
+                x:Name="PathFileDisplay"
+                Padding="10"
+                BackgroundColor="Black"
+                HorizontalOptions="Fill"
+                Text="..."
+                TextColor="White" />
+            <!--<Label
+                x:Name="PathFileEnvironmentDisplay"
+                Padding="10"
+                BackgroundColor="Black"
+                HorizontalOptions="Fill"
+                Text="..."
+                TextColor="White" />-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
