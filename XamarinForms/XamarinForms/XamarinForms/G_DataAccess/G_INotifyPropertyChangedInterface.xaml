@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.G_DataAccess.G_INotifyPropertyChangedInterface"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <!--
+        INotifyPropertyChanged On Xamarin.Forms
+        
+        When using the ObservableCollection its only updating the UI when adding or deleting,
+        but on Update its not, to make the update hapen use INotifyPropertyChanged
+        
+        The goal is simplifying MVVM INotifyPropertyChanged in Xamarin Forms therefore making
+        it unnecessary to keep inheriting base classes and handling the setter of each ViewModel Property.
+        
+        https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8
+    -->
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Clicked="OnAdd"
+            Order="Primary"
+            Text="Add" />
+        <ToolbarItem
+            Clicked="OnUpdate"
+            Order="Primary"
+            Text="Update" />
+        <ToolbarItem
+            Clicked="OnDelete"
+            Order="Primary"
+            Text="Delete" />
+        <ToolbarItem
+            Clicked="OnReload"
+            Order="Secondary"
+            Text="Reload" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ListView
+            x:Name="ListViewItems"
+            IsPullToRefreshEnabled="True"
+            Refreshing="OnRefresh">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

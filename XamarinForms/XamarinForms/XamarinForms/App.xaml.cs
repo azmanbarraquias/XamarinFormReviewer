@@ -48,11 +48,12 @@ namespace XamarinForms
             // new NavigationPage ( new yourPage() ); - is to implement Navigation fuction
 
             // Starting point of page
-            MainPage = new NavigationPage(new F_ContextActions());
+            MainPage = new NavigationPage(new H_ConsumingRESTfulServices());
         }
 
         protected override void OnStart()
         {
+
         }
 
         protected override void OnSleep()
