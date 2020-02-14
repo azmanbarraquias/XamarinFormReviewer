@@ -1,24 +1,25 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace XamarinForms.F_FormsAndSettingPages.ContactBookByMosh.Models
+namespace XamarinForms.G_DataAccess._Exercises.ContactBook.Models
 {
-	public class Contact : INotifyPropertyChanged
+	public class ContactCB : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler PropertyChanged;
 
+		[PrimaryKey, AutoIncrement]
 		public int Id { get; set; }
 
 		private string _firstName;
+
+		[MaxLength(255)]
 		public string FirstName
 		{
-			get
-			{
-				return _firstName;
-			}
+			get { return _firstName; }
 			set
 			{
 				if (_firstName == value)
@@ -27,16 +28,16 @@ namespace XamarinForms.F_FormsAndSettingPages.ContactBookByMosh.Models
 				_firstName = value;
 
 				OnPropertyChanged();
+				OnPropertyChanged(nameof(FullName));
 			}
 		}
 
 		private string _lastName;
+
+		[MaxLength(255)]
 		public string LastName
 		{
-			get
-			{
-				return _lastName;
-			}
+			get { return _lastName; }
 			set
 			{
 				if (_lastName == value)
@@ -45,27 +46,25 @@ namespace XamarinForms.F_FormsAndSettingPages.ContactBookByMosh.Models
 				_lastName = value;
 
 				OnPropertyChanged();
+				OnPropertyChanged(nameof(FullName));
 			}
 		}
+
+		[MaxLength(255)]
 		public string Phone { get; set; }
+
+		[MaxLength(255)]
 		public string Email { get; set; }
+
 		public bool IsBlocked { get; set; }
 
 		public string FullName
 		{
-			// Note the string interpolation syntax in C# 6. Read my blog post
-			// for details: 
-			// 
-			// http://programmingwithmosh.com/csharp/csharp-6-features-that-help-you-write-cleaner-code/
 			get { return $"{FirstName} {LastName}"; }
 		}
 
-		private void OnPropertyChanged([CallerMemberName]string propertyName = null)
+		private void OnPropertyChanged([CallerMemberName] string propertyName = null)
 		{
-			//if (PropertyChanged !=null)
-			//{
-			//    PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			//} same as,
 			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 		}
 	}

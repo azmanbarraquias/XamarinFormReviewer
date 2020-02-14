@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.H_MVVM.B_CodeBehindAndTestability.Views.PlaylistsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="OnAddPlaylist" Text="Add" />
+    </ContentPage.ToolbarItems>
+
+    <ListView x:Name="playlistsListView" ItemSelected="OnPlaylistSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell
+                    Detail="{Binding IsFavorite, StringFormat='Favorite: {0}'}"
+                    Text="{Binding Title}"
+                    TextColor="{Binding Color}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>

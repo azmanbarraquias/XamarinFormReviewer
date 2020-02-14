@@ -39,8 +39,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="G_DataAccess\F_INotifyPropertyChangedInterface\" />
-    <Folder Include="H_MVVM\" />
+    <Folder Include="H_MVVM\B_Demo\ViewModels\" />
     <Folder Include="I_BuildingComplexApps\" />
   </ItemGroup>
 
@@ -202,7 +201,7 @@
     <EmbeddedResource Update="D_Lists\_Excercies\Airbnb.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="E_Navigation\_Exercies\ActivityInfo.xaml">
+    <EmbeddedResource Update="E_Navigation\_Exercise\ActivityInfo.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="E_Navigation\A_HierarchicalNavigation\IntroductionPage.xaml">
@@ -253,13 +252,13 @@
     <EmbeddedResource Update="E_Navigation\H_ToolbarItem\ToolbarItemMenu.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="E_Navigation\_Exercies\ActivityPage.xaml">
+    <EmbeddedResource Update="E_Navigation\_Exercise\ActivityPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="E_Navigation\_Exercies\MainPageTabbed.xaml">
+    <EmbeddedResource Update="E_Navigation\_Exercise\MainPageTabbed.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="E_Navigation\_Exercies\ProfilePage.xaml">
+    <EmbeddedResource Update="E_Navigation\_Exercise\ProfilePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="F_FormsAndSettingPages\A_Switch.xaml">
@@ -344,6 +343,27 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="G_DataAccess\K_LoadResourceXml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="G_DataAccess\_Exercises\ContactBook\Views\ContactDetailPageCB.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="G_DataAccess\_Exercises\ContactBook\Views\ContactsPageCB.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="G_DataAccess\_Exercises\NetflixRoulette\View\MovieDetailsPageNR.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="G_DataAccess\_Exercises\NetflixRoulette\View\MoviesPageNR.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="H_MVVM\A_WhatIsMVVM.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="H_MVVM\B_Demo\Views\PlaylistDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="H_MVVM\B_Demo\Views\PlaylistsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

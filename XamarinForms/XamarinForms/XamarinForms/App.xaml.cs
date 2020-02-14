@@ -32,6 +32,8 @@ using XamarinForms.F_FormsAndSettingPages.ContactBookByMosh;
 
 
 using XamarinForms.G_DataAccess;
+using XamarinForms.G_DataAccess._Exercises.ContactBook.Views;
+using XamarinForms.H_MVVM.B_CodeBehindAndTestability.Views;
 
 namespace XamarinForms
 {
@@ -48,12 +50,11 @@ namespace XamarinForms
             // new NavigationPage ( new yourPage() ); - is to implement Navigation fuction
 
             // Starting point of page
-            MainPage = new NavigationPage(new H_ConsumingRESTfulServices());
+            MainPage = new NavigationPage(new PlaylistsPage());
         }
 
         protected override void OnStart()
         {
-
         }
 
         protected override void OnSleep()

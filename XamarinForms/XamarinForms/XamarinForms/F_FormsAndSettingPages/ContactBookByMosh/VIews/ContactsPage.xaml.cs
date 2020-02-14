@@ -14,6 +14,7 @@ namespace XamarinForms.F_FormsAndSettingPages.ContactBookByMosh
         public ContactsPage()
         {
             InitializeComponent();
+
             _contacts = new ObservableCollection<Contact>
             {
                 new Contact { Id = 1, FirstName = "John", LastName = "Smith", Email = "john@smith.com", Phone = "1111" },

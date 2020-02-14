@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms.G_DataAccess._Exercises.ContactBook.Views.ContactDetailPageCB"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <TableView Intent="Form">
+        <TableRoot>
+            <TableSection Title="Name">
+                <EntryCell Label="First name" Text="{Binding FirstName}" />
+                <EntryCell Label="Last name" Text="{Binding LastName}" />
+            </TableSection>
+            <TableSection Title="Contact">
+                <EntryCell
+                    Keyboard="Numeric"
+                    Label="Phone"
+                    Text="{Binding Phone}" />
+                <EntryCell
+                    Keyboard="Email"
+                    Label="Email"
+                    Text="{Binding Email}" />
+            </TableSection>
+            <TableSection Title="Other">
+                <SwitchCell On="{Binding IsBlocked}" Text="Blocked" />
+            </TableSection>
+            <TableSection>
+                <ViewCell>
+                    <Button Clicked="OnSave" Text="Save" />
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

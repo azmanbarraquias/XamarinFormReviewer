@@ -15,10 +15,10 @@
                 Text="Update" />
             <Button Clicked="OnDelete" Text="Delete" />
         </StackLayout>
-        <ListView x:Name="postsListView">
+        <ListView x:Name="ListViewItems">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Detail="{Binding Body}" Text="{Binding PostInfo}" />
+                    <TextCell Detail="{Binding Title}" Text="{Binding Id}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

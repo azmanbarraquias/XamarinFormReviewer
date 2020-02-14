@@ -13,24 +13,24 @@ using System.Collections.ObjectModel;
 
 namespace XamarinForms.G_DataAccess
 {
-    public class Post
+    public class Post1
     {
-        public int UserId { get; set; }
+        //public int UserId { get; set; }
         public int Id { get; set; }
         public string Title { get; set; }
-        public string Body { get; set; }
+        //public string Body { get; set; }
 
-        public string PostInfo { get { return string.Format($"{UserId} {Title}"); } }
+        //public string PostInfo { get { return string.Format($"{UserId} {Title}"); } }
     }
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class H_ConsumingRESTfulServices : ContentPage
     {
-        private const string jsonPlaceHolderURL = "https://jsonplaceholder.typicode.com/posts";
+        private const string jsonPlaceHolderURL = "https://my-json-server.typicode.com/azmanbarraquias/demo/posts";
 
         private readonly HttpClient _httpClient = new HttpClient();
 
-        private ObservableCollection<Post> _posts;
+        private ObservableCollection<Post1> _posts;
 
         public H_ConsumingRESTfulServices()
         {
@@ -40,20 +40,22 @@ namespace XamarinForms.G_DataAccess
         {
             var content = await _httpClient.GetStringAsync(jsonPlaceHolderURL);
 
-            var posts = JsonConvert.DeserializeObject<List<Post>>(content);
+            var posts = JsonConvert.DeserializeObject<List<Post1>>(content);
 
-            _posts = new ObservableCollection<Post>(posts);
+            _posts = new ObservableCollection<Post1>(posts);
 
             await DisplayAlert("", $"{posts.Count} of post found", "ok");
 
-            postsListView.ItemsSource = _posts;
+            ListViewItems.ItemsSource = _posts;
 
             base.OnAppearing();
         }
 
         async void OnAdd(object sender, System.EventArgs e)
         {
-            var post = new Post { Id = 0, Body = "This is text sample", Title = "Title sampe " + DateTime.Now, UserId = 0 };
+            //var post = new Post { Id = 0, Body = "This is text sample", Title = "Title sampe " + DateTime.Now, UserId = 0 };
+
+            var post = new Post1 { Id = 4, Title = "Post 4" };
 
             var postContent = JsonConvert.SerializeObject(post);
 
